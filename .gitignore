@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Model checkpoints (large, regenerable from training)
+*.pth
+
+# Model weight caches (downloaded lazily by reasoning_from_scratch)
+qwen3/
+qwen3_local/
+
+# Datasets (regenerable via the loader functions in reasoning_from_scratch)
+math_train.json
+math_train_v4pro_*.json
+math500_test.json
+math500-mps.jsonl
+math500_deepseek_v4_pro_full_answers.json
+content.csv
+
+# Notebook checkpoints
+*.ipynb_checkpoints/
+
+# Local-only artifacts (excluded H100 run, kept on disk but not committed)
+remote_artifacts/qwen_grpo_run3/
+
+# Local logs / checkpoints from a fresh run (root-anchored so the ones
+# inside remote_artifacts/<run>/ are still tracked)
+/logs/
+/checkpoints/
+
+# Editor / OS junk
+.DS_Store
+.idea/
+.vscode/
