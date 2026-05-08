@@ -26,13 +26,14 @@ This is the canonical train/eval gap that shows up in cold-start RLVR on small b
 The model rapidly masters the training-set problem distribution; that mastery does
 not transfer one-for-one to held-out problems.
 
-Full per-step training curves and eval breakdown:
-
-- [`remote_artifacts/training_curves_logp_batched.png`](remote_artifacts/training_curves_logp_batched.png)
-- [`remote_artifacts/eval_summary.md`](remote_artifacts/eval_summary.md)
-
 The 500 evaluation problems are explicitly excluded from the training pool (the source
 dataset is named `math_full_minus_math500`).
+
+Eval breakdown: [`remote_artifacts/eval_summary.md`](remote_artifacts/eval_summary.md)
+
+## Training curves
+
+![Training curves](remote_artifacts/training_curves_logp_batched.png)
 
 ## Files
 
