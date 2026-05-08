@@ -1,0 +1,4 @@
+pair,both_correct,only_first,only_second,neither
+distilled vs base,49,124,31,296
+distilled vs qwen_reasoning,148,25,154,173
+base vs qwen_reasoning,63,17,239,181

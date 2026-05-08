@@ -1,0 +1,4 @@
+model,n,correct,accuracy,avg_gen_chars,median_gen_chars,max_gen_chars
+distilled,500,173,0.3460,5835,3817,19984
+base,500,80,0.1600,216,12,6903
+qwen_reasoning,500,302,0.6040,5847,4042,17268
