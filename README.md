@@ -18,9 +18,10 @@ Full MATH-500 (n=500), `max_new_tokens=4096`, greedy decoding.
 | Qwen3-0.6B base | no fine-tuning (floor) | 16.0% |
 | GRPO (this repo, step 100) | RL, 100 steps × 8 rollouts | 40.0%* |
 | **SFT distillation (this repo)** | 12K DeepSeek V4 Pro traces, 3 epochs | **34.6%** |
+| **SFT distillation → GRPO (this repo, step 50)** | GRPO continuation from the distilled checkpoint | **50.0%*** |
 | Qwen3-0.6B reasoning | Qwen's officially-released reasoning variant (ceiling) | 60.4% |
 
-\* GRPO accuracy is from a 50-problem MATH-500 subset evaluated mid-training; the full 500-problem eval is pending. The distillation, base, and Qwen reasoning numbers are from the full 500.
+\* GRPO accuracies are from a 50-problem MATH-500 subset evaluated mid-training; the full 500-problem evals are pending. The distillation, base, and Qwen reasoning numbers are from the full 500.
 
 Full breakdown including per-difficulty accuracy and solution overlap: [`remote_artifacts/eval_summary.md`](remote_artifacts/eval_summary.md)
 
@@ -52,6 +53,24 @@ not transfer one-for-one to held-out problems.
 
 The 500 evaluation problems are explicitly excluded from the training pool (the source
 dataset is named `math_full_minus_math500`).
+
+#### Continuation from the SFT-distilled seed
+
+![SFT distillation -> GRPO training curves](remote_artifacts/training_curves_deepseek_sft_grpo.png)
+
+Re-running the same GRPO loop on top of the SFT-distilled checkpoint (epoch 3, 34.6% on full
+MATH-500) instead of the base model lifts the step-50 eval from 44.0% to **50.0%** on the same
+50-problem subset:
+
+| Step | MATH-500 acc | Correct |
+|---|---|---|
+| 50  | **50.0%** | 25/50 |
+| 100 | 40.0% | 20/50 |
+
+The run was stopped at step 101 once KL and entropy diverged (kl_loss 0.06 → 8.0, entropy
+0.5 → 9.7 over the 100 steps) and the eval regressed. `policy_ratio` stayed at 1.0000 on
+every active step, so the regression is KL drift against the SFT seed rather than off-policy
+bias. Per-step metrics: [`remote_artifacts/deepseek_sft_grpo/logs/qwen_grpo_logp_batched_metrics.csv`](remote_artifacts/deepseek_sft_grpo/logs/qwen_grpo_logp_batched_metrics.csv).
 
 ### Reward shape
 
