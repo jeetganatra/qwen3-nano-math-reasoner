@@ -1,0 +1,103 @@
+[Step 1/500] loss=0.00 reward_avg=0.187 correctness=0.250 fmt_bonus=0.013 len_pen=0.075 kl=0.00 tokens_per_sec=53.7 avg_response_len=647.5 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.52 policy_ratio=1.0000
+[Step 2/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=54.5 avg_response_len=758.9 adv_avg=0.00 adv_std=0.00 entropy_avg=0.75
+[Step 3/500] loss=0.06 reward_avg=0.919 correctness=0.875 fmt_bonus=0.044 len_pen=0.000 kl=0.06 tokens_per_sec=54.4 avg_response_len=397.8 adv_avg=0.00 adv_std=1.00 entropy_avg=0.52 policy_ratio=1.0000
+[Step 4/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=54.4 avg_response_len=349.0 adv_avg=0.00 adv_std=0.00 entropy_avg=0.39
+[Step 5/500] loss=0.13 reward_avg=0.775 correctness=0.750 fmt_bonus=0.038 len_pen=0.013 kl=0.13 tokens_per_sec=53.9 avg_response_len=489.4 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.50 policy_ratio=1.0000
+[Step 6/500] loss=0.02 reward_avg=0.856 correctness=0.875 fmt_bonus=0.044 len_pen=0.062 kl=0.02 tokens_per_sec=53.9 avg_response_len=648.4 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.38 policy_ratio=1.0000
+[Step 7/500] loss=-0.07 reward_avg=-0.088 correctness=0.000 fmt_bonus=0.000 len_pen=0.088 kl=-0.07 tokens_per_sec=54.0 avg_response_len=733.4 adv_avg=0.00 adv_std=1.00 entropy_avg=0.50 policy_ratio=1.0000
+[Step 8/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=51.6 avg_response_len=288.0 adv_avg=0.00 adv_std=0.00 entropy_avg=0.33
+[Step 9/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=52.9 avg_response_len=768.0 adv_avg=0.00 adv_std=0.00 entropy_avg=0.69
+[Step 10/500] loss=0.01 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=0.01 tokens_per_sec=54.1 avg_response_len=660.0 adv_avg=0.00 adv_std=1.00 entropy_avg=0.50 policy_ratio=1.0000
+[Step 11/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.4 avg_response_len=342.4 adv_avg=0.00 adv_std=0.00 entropy_avg=0.51
+[Step 12/500] loss=-0.04 reward_avg=-0.075 correctness=0.000 fmt_bonus=0.000 len_pen=0.075 kl=-0.04 tokens_per_sec=54.3 avg_response_len=663.9 adv_avg=0.00 adv_std=1.00 entropy_avg=0.37 policy_ratio=1.0000
+[Step 13/500] loss=-0.15 reward_avg=-0.025 correctness=0.000 fmt_bonus=0.000 len_pen=0.025 kl=-0.15 tokens_per_sec=52.7 avg_response_len=415.5 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.93 policy_ratio=1.0000
+[Step 14/500] loss=-0.01 reward_avg=0.906 correctness=0.875 fmt_bonus=0.044 len_pen=0.013 kl=-0.01 tokens_per_sec=53.7 avg_response_len=516.1 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.49 policy_ratio=1.0000
+[Step 15/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.6 avg_response_len=280.5 adv_avg=0.00 adv_std=0.00 entropy_avg=0.34
+[Step 16/500] loss=-0.09 reward_avg=0.369 correctness=0.375 fmt_bonus=0.019 len_pen=0.025 kl=-0.09 tokens_per_sec=54.1 avg_response_len=525.1 adv_avg=0.00 adv_std=1.00 entropy_avg=0.63 policy_ratio=1.0000
+[Step 17/500] loss=-0.16 reward_avg=0.056 correctness=0.125 fmt_bonus=0.006 len_pen=0.075 kl=-0.16 tokens_per_sec=53.9 avg_response_len=684.9 adv_avg=0.00 adv_std=1.00 entropy_avg=0.59 policy_ratio=1.0000
+[Step 18/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.8 avg_response_len=450.4 adv_avg=0.00 adv_std=0.00 entropy_avg=0.46
+[Step 19/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=54.2 avg_response_len=371.6 adv_avg=0.00 adv_std=0.00 entropy_avg=0.57
+[Step 20/500] loss=-0.06 reward_avg=0.381 correctness=0.375 fmt_bonus=0.019 len_pen=0.013 kl=-0.06 tokens_per_sec=53.8 avg_response_len=390.8 adv_avg=0.00 adv_std=1.00 entropy_avg=0.47 policy_ratio=1.0000
+[Step 21/500] loss=0.03 reward_avg=0.906 correctness=0.875 fmt_bonus=0.044 len_pen=0.013 kl=0.03 tokens_per_sec=53.7 avg_response_len=347.2 adv_avg=0.00 adv_std=1.00 entropy_avg=0.54 policy_ratio=1.0000
+[Step 22/500] loss=-0.25 reward_avg=0.056 correctness=0.125 fmt_bonus=0.006 len_pen=0.075 kl=-0.25 tokens_per_sec=53.7 avg_response_len=672.5 adv_avg=0.00 adv_std=1.00 entropy_avg=0.65 policy_ratio=1.0000
+[Step 23/500] loss=-0.35 reward_avg=-0.075 correctness=0.000 fmt_bonus=0.000 len_pen=0.075 kl=-0.35 tokens_per_sec=53.4 avg_response_len=703.1 adv_avg=0.00 adv_std=1.00 entropy_avg=0.64 policy_ratio=1.0000
+[Step 24/500] loss=-0.11 reward_avg=0.788 correctness=0.750 fmt_bonus=0.038 len_pen=0.000 kl=-0.11 tokens_per_sec=54.0 avg_response_len=369.0 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.57 policy_ratio=1.0000
+[Step 25/500] loss=-0.07 reward_avg=0.644 correctness=0.625 fmt_bonus=0.031 len_pen=0.013 kl=-0.07 tokens_per_sec=53.6 avg_response_len=431.2 adv_avg=0.00 adv_std=1.00 entropy_avg=0.48 policy_ratio=1.0000
+[Step 26/500] loss=-0.08 reward_avg=0.656 correctness=0.625 fmt_bonus=0.031 len_pen=0.000 kl=-0.08 tokens_per_sec=53.6 avg_response_len=352.6 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.80 policy_ratio=1.0000
+[Step 27/500] loss=-0.10 reward_avg=0.906 correctness=0.875 fmt_bonus=0.044 len_pen=0.013 kl=-0.10 tokens_per_sec=53.2 avg_response_len=403.5 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.53 policy_ratio=1.0000
+[Step 28/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.6 avg_response_len=199.1 adv_avg=0.00 adv_std=0.00 entropy_avg=0.59
+[Step 29/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=54.1 avg_response_len=741.0 adv_avg=0.00 adv_std=0.00 entropy_avg=1.25
+[Step 30/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.7 avg_response_len=265.8 adv_avg=0.00 adv_std=0.00 entropy_avg=0.54
+[Step 31/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=54.0 avg_response_len=238.5 adv_avg=0.00 adv_std=0.00 entropy_avg=0.41
+[Step 32/500] loss=-0.17 reward_avg=0.631 correctness=0.625 fmt_bonus=0.031 len_pen=0.025 kl=-0.17 tokens_per_sec=53.7 avg_response_len=431.1 adv_avg=0.00 adv_std=1.00 entropy_avg=0.59 policy_ratio=1.0000
+[Step 33/500] loss=-0.07 reward_avg=1.038 correctness=1.000 fmt_bonus=0.050 len_pen=0.013 kl=-0.07 tokens_per_sec=53.5 avg_response_len=426.5 adv_avg=0.00 adv_std=1.00 entropy_avg=0.37 policy_ratio=1.0000
+[Step 34/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.0 avg_response_len=212.2 adv_avg=0.00 adv_std=0.00 entropy_avg=0.57
+[Step 35/500] loss=0.00 reward_avg=0.788 correctness=0.750 fmt_bonus=0.038 len_pen=0.000 kl=0.00 tokens_per_sec=53.1 avg_response_len=306.8 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.65 policy_ratio=1.0000
+[Step 36/500] loss=-0.52 reward_avg=0.187 correctness=0.250 fmt_bonus=0.013 len_pen=0.075 kl=-0.52 tokens_per_sec=53.6 avg_response_len=685.9 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.99 policy_ratio=1.0000
+[Step 37/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.7 avg_response_len=133.8 adv_avg=0.00 adv_std=0.00 entropy_avg=0.71
+[Step 38/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.9 avg_response_len=103.9 adv_avg=0.00 adv_std=0.00 entropy_avg=0.59
+[Step 39/500] loss=-0.21 reward_avg=-0.013 correctness=0.000 fmt_bonus=0.000 len_pen=0.013 kl=-0.21 tokens_per_sec=53.9 avg_response_len=391.9 adv_avg=0.00 adv_std=1.00 entropy_avg=0.73 policy_ratio=1.0000
+[Step 40/500] loss=-0.16 reward_avg=0.381 correctness=0.375 fmt_bonus=0.019 len_pen=0.013 kl=-0.16 tokens_per_sec=53.1 avg_response_len=352.8 adv_avg=0.00 adv_std=1.00 entropy_avg=0.96 policy_ratio=1.0000
+[Step 41/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.2 avg_response_len=365.8 adv_avg=0.00 adv_std=0.00 entropy_avg=0.73
+[Step 42/500] loss=-0.19 reward_avg=0.131 correctness=0.125 fmt_bonus=0.006 len_pen=0.000 kl=-0.19 tokens_per_sec=54.0 avg_response_len=328.5 adv_avg=0.00 adv_std=1.00 entropy_avg=1.00 policy_ratio=1.0000
+[Step 43/500] loss=-0.17 reward_avg=0.775 correctness=0.750 fmt_bonus=0.038 len_pen=0.013 kl=-0.17 tokens_per_sec=54.0 avg_response_len=440.8 adv_avg=-0.00 adv_std=1.00 entropy_avg=1.00 policy_ratio=1.0000
+[Step 44/500] loss=-0.09 reward_avg=0.512 correctness=0.500 fmt_bonus=0.025 len_pen=0.013 kl=-0.09 tokens_per_sec=53.5 avg_response_len=442.2 adv_avg=0.00 adv_std=1.00 entropy_avg=0.55 policy_ratio=1.0000
+[Step 45/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=54.1 avg_response_len=181.2 adv_avg=0.00 adv_std=0.00 entropy_avg=0.50
+[Step 46/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=54.2 avg_response_len=182.2 adv_avg=0.00 adv_std=0.00 entropy_avg=1.03
+[Step 47/500] loss=0.06 reward_avg=0.525 correctness=0.500 fmt_bonus=0.025 len_pen=0.000 kl=0.06 tokens_per_sec=53.7 avg_response_len=351.9 adv_avg=0.00 adv_std=1.00 entropy_avg=0.61 policy_ratio=1.0000
+[Step 48/500] loss=0.06 reward_avg=0.788 correctness=0.750 fmt_bonus=0.038 len_pen=0.000 kl=0.06 tokens_per_sec=53.3 avg_response_len=333.6 adv_avg=-0.00 adv_std=1.00 entropy_avg=0.55 policy_ratio=1.0000
+[Step 49/500] loss=-0.30 reward_avg=0.056 correctness=0.125 fmt_bonus=0.006 len_pen=0.075 kl=-0.30 tokens_per_sec=53.7 avg_response_len=687.6 adv_avg=0.00 adv_std=1.00 entropy_avg=1.14 policy_ratio=1.0000
+[Eval step 50] math500_acc=0.50 (25/50)
+[Step 50/500] loss=-0.21 reward_avg=0.187 correctness=0.250 fmt_bonus=0.013 len_pen=0.075 kl=-0.21 tokens_per_sec=54.1 avg_response_len=614.2 adv_avg=-0.00 adv_std=1.00 entropy_avg=1.59 policy_ratio=1.0000
+[Step 51/500] loss=0.09 reward_avg=0.644 correctness=0.625 fmt_bonus=0.031 len_pen=0.013 kl=0.09 tokens_per_sec=54.1 avg_response_len=383.6 adv_avg=0.00 adv_std=1.00 entropy_avg=1.02 policy_ratio=1.0000
+[Step 52/500] loss=-0.39 reward_avg=0.031 correctness=0.125 fmt_bonus=0.006 len_pen=0.100 kl=-0.39 tokens_per_sec=53.5 avg_response_len=751.2 adv_avg=0.00 adv_std=1.00 entropy_avg=1.70 policy_ratio=1.0000
+[Step 53/500] loss=0.00 reward_avg=1.050 correctness=1.000 fmt_bonus=0.050 len_pen=0.000 kl=0.00 tokens_per_sec=53.3 avg_response_len=166.1 adv_avg=0.00 adv_std=0.00 entropy_avg=1.34
+[Step 54/500] loss=0.14 reward_avg=0.644 correctness=0.625 fmt_bonus=0.031 len_pen=0.013 kl=0.14 tokens_per_sec=53.9 avg_response_len=355.4 adv_avg=0.00 adv_std=1.00 entropy_avg=1.00 policy_ratio=1.0000
+[Step 55/500] loss=0.07 reward_avg=0.081 correctness=0.125 fmt_bonus=0.006 len_pen=0.050 kl=0.07 tokens_per_sec=53.7 avg_response_len=578.2 adv_avg=0.00 adv_std=1.00 entropy_avg=1.68 policy_ratio=1.0000
+[Step 56/500] loss=0.00 reward_avg=0.000 correctness=0.000 fmt_bonus=0.000 len_pen=0.000 kl=0.00 tokens_per_sec=53.7 avg_response_len=333.5 adv_avg=0.00 adv_std=0.00 entropy_avg=1.49
+[Step 57/500] loss=0.19 reward_avg=0.069 correctness=0.125 fmt_bonus=0.006 len_pen=0.062 kl=0.19 tokens_per_sec=53.9 avg_response_len=565.2 adv_avg=0.00 adv_std=1.00 entropy_avg=1.77 policy_ratio=1.0000
+[Step 58/500] loss=0.06 reward_avg=0.331 correctness=0.375 fmt_bonus=0.019 len_pen=0.062 kl=0.06 tokens_per_sec=54.3 avg_response_len=661.8 adv_avg=0.00 adv_std=1.00 entropy_avg=2.48 policy_ratio=1.0000
+[Step 59/500] loss=0.34 reward_avg=0.356 correctness=0.375 fmt_bonus=0.019 len_pen=0.038 kl=0.34 tokens_per_sec=54.3 avg_response_len=580.9 adv_avg=-0.00 adv_std=1.00 entropy_avg=2.44 policy_ratio=1.0000
+[Step 60/500] loss=0.25 reward_avg=-0.075 correctness=0.000 fmt_bonus=0.000 len_pen=0.075 kl=0.25 tokens_per_sec=53.4 avg_response_len=698.6 adv_avg=0.00 adv_std=1.00 entropy_avg=2.08 policy_ratio=1.0000
+[Step 61/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=54.3 avg_response_len=768.0 adv_avg=0.00 adv_std=0.00 entropy_avg=4.03
+[Step 62/500] loss=0.78 reward_avg=0.369 correctness=0.375 fmt_bonus=0.019 len_pen=0.025 kl=0.78 tokens_per_sec=53.7 avg_response_len=487.6 adv_avg=0.00 adv_std=1.00 entropy_avg=1.72 policy_ratio=1.0000
+[Step 63/500] loss=0.49 reward_avg=-0.038 correctness=0.000 fmt_bonus=0.000 len_pen=0.038 kl=0.49 tokens_per_sec=53.8 avg_response_len=536.0 adv_avg=0.00 adv_std=1.00 entropy_avg=2.93 policy_ratio=1.0000
+[Step 64/500] loss=0.52 reward_avg=0.394 correctness=0.375 fmt_bonus=0.019 len_pen=0.000 kl=0.52 tokens_per_sec=53.7 avg_response_len=257.9 adv_avg=-0.00 adv_std=1.00 entropy_avg=1.65 policy_ratio=1.0000
+[Step 65/500] loss=0.70 reward_avg=0.500 correctness=0.500 fmt_bonus=0.025 len_pen=0.025 kl=0.70 tokens_per_sec=53.4 avg_response_len=355.8 adv_avg=0.00 adv_std=1.00 entropy_avg=2.57 policy_ratio=1.0000
+[Step 66/500] loss=1.32 reward_avg=-0.088 correctness=0.000 fmt_bonus=0.000 len_pen=0.088 kl=1.32 tokens_per_sec=53.7 avg_response_len=717.5 adv_avg=0.00 adv_std=1.00 entropy_avg=4.63 policy_ratio=1.0000
+[Step 67/500] loss=1.51 reward_avg=-0.075 correctness=0.000 fmt_bonus=0.000 len_pen=0.075 kl=1.51 tokens_per_sec=54.1 avg_response_len=664.8 adv_avg=0.00 adv_std=1.00 entropy_avg=5.77 policy_ratio=1.0000
+[Step 68/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=53.7 avg_response_len=736.6 adv_avg=0.00 adv_std=0.00 entropy_avg=4.02
+[Step 69/500] loss=1.49 reward_avg=-0.088 correctness=0.000 fmt_bonus=0.000 len_pen=0.088 kl=1.49 tokens_per_sec=53.8 avg_response_len=716.6 adv_avg=0.00 adv_std=1.00 entropy_avg=4.87 policy_ratio=1.0000
+[Step 70/500] loss=1.02 reward_avg=0.919 correctness=0.875 fmt_bonus=0.044 len_pen=0.000 kl=1.02 tokens_per_sec=52.9 avg_response_len=159.4 adv_avg=0.00 adv_std=1.00 entropy_avg=3.50 policy_ratio=1.0000
+[Step 71/500] loss=0.00 reward_avg=-0.100 correctness=0.000 fmt_bonus=0.000 len_pen=0.100 kl=0.00 tokens_per_sec=53.6 avg_response_len=758.1 adv_avg=0.00 adv_std=0.00 entropy_avg=5.39
+[Step 72/500] loss=2.27 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=2.27 tokens_per_sec=53.2 avg_response_len=613.1 adv_avg=-0.00 adv_std=1.00 entropy_avg=4.97 policy_ratio=1.0000
+[Step 73/500] loss=2.08 reward_avg=-0.088 correctness=0.000 fmt_bonus=0.000 len_pen=0.088 kl=2.08 tokens_per_sec=53.6 avg_response_len=663.5 adv_avg=0.00 adv_std=1.00 entropy_avg=5.85 policy_ratio=1.0000
+[Step 74/500] loss=1.40 reward_avg=0.512 correctness=0.500 fmt_bonus=0.025 len_pen=0.013 kl=1.40 tokens_per_sec=53.7 avg_response_len=283.5 adv_avg=0.00 adv_std=1.00 entropy_avg=2.51 policy_ratio=1.0000
+[Step 75/500] loss=2.06 reward_avg=-0.038 correctness=0.000 fmt_bonus=0.000 len_pen=0.038 kl=2.06 tokens_per_sec=53.3 avg_response_len=510.0 adv_avg=0.00 adv_std=1.00 entropy_avg=6.70 policy_ratio=1.0000
+[Step 76/500] loss=3.20 reward_avg=0.056 correctness=0.125 fmt_bonus=0.006 len_pen=0.075 kl=3.20 tokens_per_sec=54.1 avg_response_len=637.1 adv_avg=0.00 adv_std=1.00 entropy_avg=5.96 policy_ratio=1.0000
+[Step 77/500] loss=3.15 reward_avg=0.187 correctness=0.250 fmt_bonus=0.013 len_pen=0.075 kl=3.15 tokens_per_sec=53.6 avg_response_len=655.4 adv_avg=-0.00 adv_std=1.00 entropy_avg=6.03 policy_ratio=1.0000
+[Step 78/500] loss=3.53 reward_avg=0.237 correctness=0.250 fmt_bonus=0.013 len_pen=0.025 kl=3.53 tokens_per_sec=53.8 avg_response_len=532.8 adv_avg=-0.00 adv_std=1.00 entropy_avg=6.25 policy_ratio=1.0000
+[Step 79/500] loss=3.38 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=3.38 tokens_per_sec=53.4 avg_response_len=640.9 adv_avg=0.00 adv_std=1.00 entropy_avg=7.36 policy_ratio=1.0000
+[Step 80/500] loss=2.76 reward_avg=0.106 correctness=0.125 fmt_bonus=0.006 len_pen=0.025 kl=2.76 tokens_per_sec=53.6 avg_response_len=491.6 adv_avg=-0.00 adv_std=1.00 entropy_avg=6.87 policy_ratio=1.0000
+[Step 81/500] loss=2.84 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=2.84 tokens_per_sec=53.6 avg_response_len=624.6 adv_avg=-0.00 adv_std=1.00 entropy_avg=6.80 policy_ratio=1.0000
+[Step 82/500] loss=4.57 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=4.57 tokens_per_sec=54.1 avg_response_len=573.6 adv_avg=0.00 adv_std=1.00 entropy_avg=5.64 policy_ratio=1.0000
+[Step 83/500] loss=4.01 reward_avg=-0.025 correctness=0.000 fmt_bonus=0.000 len_pen=0.025 kl=4.01 tokens_per_sec=53.8 avg_response_len=481.8 adv_avg=-0.00 adv_std=1.00 entropy_avg=6.51 policy_ratio=1.0000
+[Step 84/500] loss=4.45 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=4.45 tokens_per_sec=53.5 avg_response_len=639.6 adv_avg=0.00 adv_std=1.00 entropy_avg=6.72 policy_ratio=1.0000
+[Step 85/500] loss=4.48 reward_avg=0.356 correctness=0.375 fmt_bonus=0.019 len_pen=0.038 kl=4.48 tokens_per_sec=53.9 avg_response_len=466.8 adv_avg=0.00 adv_std=1.00 entropy_avg=6.93 policy_ratio=1.0000
+[Step 86/500] loss=3.81 reward_avg=0.763 correctness=0.750 fmt_bonus=0.038 len_pen=0.025 kl=3.81 tokens_per_sec=53.8 avg_response_len=353.6 adv_avg=0.00 adv_std=1.00 entropy_avg=5.65 policy_ratio=1.0000
+[Step 87/500] loss=3.62 reward_avg=-0.038 correctness=0.000 fmt_bonus=0.000 len_pen=0.038 kl=3.62 tokens_per_sec=53.9 avg_response_len=555.0 adv_avg=0.00 adv_std=1.00 entropy_avg=7.39 policy_ratio=1.0000
+[Step 88/500] loss=3.95 reward_avg=-0.050 correctness=0.000 fmt_bonus=0.000 len_pen=0.050 kl=3.95 tokens_per_sec=53.5 avg_response_len=542.6 adv_avg=0.00 adv_std=1.00 entropy_avg=7.85 policy_ratio=1.0000
+[Step 89/500] loss=2.85 reward_avg=0.187 correctness=0.250 fmt_bonus=0.013 len_pen=0.075 kl=2.85 tokens_per_sec=53.9 avg_response_len=607.5 adv_avg=-0.00 adv_std=1.00 entropy_avg=8.45 policy_ratio=1.0000
+[Step 90/500] loss=3.27 reward_avg=-0.038 correctness=0.000 fmt_bonus=0.000 len_pen=0.038 kl=3.27 tokens_per_sec=53.8 avg_response_len=514.6 adv_avg=0.00 adv_std=1.00 entropy_avg=8.49 policy_ratio=1.0000
+[Step 91/500] loss=4.32 reward_avg=0.069 correctness=0.125 fmt_bonus=0.006 len_pen=0.062 kl=4.32 tokens_per_sec=54.3 avg_response_len=567.4 adv_avg=-0.00 adv_std=1.00 entropy_avg=8.63 policy_ratio=1.0000
+[Step 92/500] loss=3.07 reward_avg=0.619 correctness=0.625 fmt_bonus=0.031 len_pen=0.038 kl=3.07 tokens_per_sec=54.0 avg_response_len=436.2 adv_avg=0.00 adv_std=1.00 entropy_avg=5.31 policy_ratio=1.0000
+[Step 93/500] loss=5.89 reward_avg=0.056 correctness=0.125 fmt_bonus=0.006 len_pen=0.075 kl=5.89 tokens_per_sec=53.9 avg_response_len=661.6 adv_avg=0.00 adv_std=1.00 entropy_avg=8.26 policy_ratio=1.0000
+[Step 94/500] loss=3.94 reward_avg=-0.038 correctness=0.000 fmt_bonus=0.000 len_pen=0.038 kl=3.94 tokens_per_sec=53.6 avg_response_len=462.9 adv_avg=0.00 adv_std=1.00 entropy_avg=6.81 policy_ratio=1.0000
+[Step 95/500] loss=4.39 reward_avg=-0.050 correctness=0.000 fmt_bonus=0.000 len_pen=0.050 kl=4.39 tokens_per_sec=54.1 avg_response_len=511.1 adv_avg=0.00 adv_std=1.00 entropy_avg=6.07 policy_ratio=1.0000
+[Step 96/500] loss=4.05 reward_avg=0.094 correctness=0.125 fmt_bonus=0.006 len_pen=0.038 kl=4.05 tokens_per_sec=53.9 avg_response_len=443.8 adv_avg=0.00 adv_std=1.00 entropy_avg=6.36 policy_ratio=1.0000
+[Step 97/500] loss=5.96 reward_avg=-0.062 correctness=0.000 fmt_bonus=0.000 len_pen=0.062 kl=5.96 tokens_per_sec=54.0 avg_response_len=600.4 adv_avg=0.00 adv_std=1.00 entropy_avg=8.47 policy_ratio=1.0000
+[Step 98/500] loss=4.90 reward_avg=0.081 correctness=0.125 fmt_bonus=0.006 len_pen=0.050 kl=4.90 tokens_per_sec=53.9 avg_response_len=491.2 adv_avg=0.00 adv_std=1.00 entropy_avg=7.04 policy_ratio=1.0000
+[Step 99/500] loss=3.37 reward_avg=-0.025 correctness=0.000 fmt_bonus=0.000 len_pen=0.025 kl=3.37 tokens_per_sec=53.5 avg_response_len=396.5 adv_avg=-0.00 adv_std=1.00 entropy_avg=5.86 policy_ratio=1.0000
+[Eval step 100] math500_acc=0.40 (20/50)
+[Step 100/500] loss=6.10 reward_avg=0.069 correctness=0.125 fmt_bonus=0.006 len_pen=0.062 kl=6.10 tokens_per_sec=54.2 avg_response_len=528.5 adv_avg=0.00 adv_std=1.00 entropy_avg=7.69 policy_ratio=1.0000
+[Step 101/500] loss=8.05 reward_avg=-0.088 correctness=0.000 fmt_bonus=0.000 len_pen=0.088 kl=8.05 tokens_per_sec=53.9 avg_response_len=694.5 adv_avg=0.00 adv_std=1.00 entropy_avg=9.70 policy_ratio=1.0000
