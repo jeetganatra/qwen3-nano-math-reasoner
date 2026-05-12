@@ -52,6 +52,28 @@ CSV_LOG_PATH = Path(__file__).parent / "logs" / f"{SCRIPT_NAME}_metrics.csv"
 CHECKPOINT_DIR = Path(__file__).parent / "checkpoints" / SCRIPT_NAME
 
 
+def configure_output_paths(output_dir=None, log_dir=None, checkpoint_dir=None):
+    """Override default local output paths for independent experiment runs."""
+    global LOG_PATH, METRICS_LOG_PATH, CSV_LOG_PATH, CHECKPOINT_DIR
+
+    if output_dir:
+        output_dir = Path(output_dir)
+        log_dir = output_dir / "logs" if log_dir is None else Path(log_dir)
+        checkpoint_dir = (
+            output_dir / "checkpoints" if checkpoint_dir is None else Path(checkpoint_dir)
+        )
+    else:
+        log_dir = Path(log_dir) if log_dir is not None else LOG_PATH.parent
+        checkpoint_dir = (
+            Path(checkpoint_dir) if checkpoint_dir is not None else CHECKPOINT_DIR
+        )
+
+    LOG_PATH = log_dir / f"{SCRIPT_NAME}_outputs.txt"
+    METRICS_LOG_PATH = log_dir / f"{SCRIPT_NAME}_metrics.txt"
+    CSV_LOG_PATH = log_dir / f"{SCRIPT_NAME}_metrics.csv"
+    CHECKPOINT_DIR = checkpoint_dir
+
+
 @torch.no_grad()
 def sample_response(
     model,
@@ -631,7 +653,24 @@ if __name__ == "__main__":
     parser.add_argument("--format_bonus_weight", type=float, default=0.05)
     parser.add_argument("--length_penalty_weight", type=float, default=0.1)
     parser.add_argument("--length_penalty_threshold_frac", type=float, default=0.8)
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default=None,
+        help=(
+            "Root directory for an isolated run. Writes logs/ and checkpoints/ "
+            "under this directory unless explicit log/checkpoint dirs are set."
+        ),
+    )
+    parser.add_argument("--log_dir", type=str, default=None)
+    parser.add_argument("--checkpoint_dir", type=str, default=None)
     args = parser.parse_args()
+
+    configure_output_paths(
+        output_dir=args.output_dir,
+        log_dir=args.log_dir,
+        checkpoint_dir=args.checkpoint_dir,
+    )
 
     if args.seed is not None and str(args.seed).strip().lower() != "none":
         torch.manual_seed(int(args.seed))
@@ -672,6 +711,7 @@ if __name__ == "__main__":
         clip_eps=args.clip_eps,
         inner_epochs=args.inner_epochs,
         kl_coeff=args.kl_coeff,
+        checkpoint_dir=CHECKPOINT_DIR,
         eval_max_items=args.eval_on_checkpoint,
         skip_zero_advantage_updates=args.skip_zero_advantage_updates,
         show_eta=args.show_eta,
@@ -686,7 +726,5 @@ if __name__ == "__main__":
 
     CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
     torch.save(trained.state_dict(), CHECKPOINT_DIR / "qwen3-0.6B-rlvr-grpo.pth")
-
-
 
 

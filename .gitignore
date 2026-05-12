@@ -5,6 +5,11 @@ __pycache__/
 .venv/
 venv/
 
+# Local secrets
+.env
+.env.*
+!.env.example
+
 # Model checkpoints (large, regenerable from training)
 *.pth
 
