@@ -26,8 +26,8 @@ generating "Actually, let me double-check..." prose until `max_new_tokens=4096` 
 The correct answers are usually at the front of the output; the rambling is cosmetic
 and doesn't affect accuracy.
 
-Raw eval JSONLs: [`remote_artifacts/qwen_distill/evals/`](qwen_distill/evals).
-Aggregated CSVs: [`comparison.csv`](qwen_distill/comparison.csv), [`comparison_by_level.csv`](qwen_distill/comparison_by_level.csv), [`overlap_matrix.csv`](qwen_distill/overlap_matrix.csv).
+Raw eval JSONLs: [`results/sft_deepseek/evals/`](sft_deepseek/evals), [`results/sft_qwen/evals/`](sft_qwen/evals).
+Aggregated CSVs: [`comparisons/comparison.csv`](comparisons/comparison.csv), [`comparisons/comparison_by_level.csv`](comparisons/comparison_by_level.csv), [`comparisons/overlap_matrix.csv`](comparisons/overlap_matrix.csv).
 
 ### Per-difficulty breakdown
 
