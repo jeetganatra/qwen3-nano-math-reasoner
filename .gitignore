@@ -20,6 +20,7 @@ qwen3_local/
 # Datasets (regenerable via the loader functions in reasoning_from_scratch)
 math_train.json
 math_train_v4pro_*.json
+math_train_qwen_*.json
 math500_test.json
 math500-mps.jsonl
 math500_deepseek_v4_pro_full_answers.json

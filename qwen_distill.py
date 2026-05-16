@@ -12,6 +12,7 @@ from reasoning_from_scratch.qwen3_batched import (
     Qwen3Model,
     load_model_and_tokenizer,
 )
+from qwen_hf_runtime import HFQwenScratchCompat
 
 
 def get_device(enable_tensor_cores=True):
@@ -92,8 +93,12 @@ def render_prompt(prompt):
     return template
 
 SCRIPT_NAME = Path(__file__).stem
-CSV_LOG_PATH = Path(__file__).parent / "logs" / f"{SCRIPT_NAME}_metrics.csv"
-CHECKPOINT_DIR = Path(__file__).parent / "checkpoints" / SCRIPT_NAME
+DEFAULT_OUTPUT_ROOT = (
+    Path(__file__).parent / "remote_artifacts" / "qwen_sft_235b_a22b_12k"
+)
+CSV_LOG_PATH = DEFAULT_OUTPUT_ROOT / "logs" / f"{SCRIPT_NAME}_metrics.csv"
+CHECKPOINT_DIR = DEFAULT_OUTPUT_ROOT / "checkpoints"
+CHECKPOINT_PREFIX = "qwen3-0.6B-qwen235b-a22b-math500-sft"
 IGNORE_INDEX = -100
 
 
@@ -102,17 +107,17 @@ def strip_think_tags(text):
 
 
 def format_distilled_answer(entry, use_think_tokens=False):
-    content = str(entry["message_content"]).strip()
-    if not content:
-        raise ValueError("Missing non-empty 'message_content' field.")
-
-    content = strip_think_tags(content)
-
     if "message_thinking" in entry:
         thinking = str(entry["message_thinking"]).strip()
     else:
         thinking = ""
     thinking = strip_think_tags(thinking)
+
+    content = str(entry["message_content"]).strip()
+    if not content:
+        raise ValueError("Missing non-empty 'message_content' field.")
+
+    content = strip_think_tags(content)
 
     if use_think_tokens:
         return f"<think>{thinking}</think>\n\n{content}"
@@ -131,7 +136,7 @@ def build_examples(data, tokenizer, use_think_tokens=False):
             prompt = render_prompt(entry["problem"])
             target_answer = format_distilled_answer(
                 entry=entry,
-                use_think_tokens=use_think_tokens
+                use_think_tokens=use_think_tokens,
             )
 
             prompt_ids = tokenizer.encode(prompt)
@@ -200,11 +205,11 @@ def split_data(data, validation_size=50, seed=123):
     return train_data, val_data
 
 
-def save_checkpoint(model, checkpoint_dir, step, suffix=""):
+def save_checkpoint(model, checkpoint_dir, step, suffix="", checkpoint_prefix=CHECKPOINT_PREFIX):
     checkpoint_dir = Path(checkpoint_dir)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     suffix = f"-{suffix}" if suffix else ""
-    checkpoint_path = checkpoint_dir / f"qwen3-0.6B-dsv4pro-math500-distill-step{step:05d}{suffix}.pth"
+    checkpoint_path = checkpoint_dir / f"{checkpoint_prefix}-step{step:05d}{suffix}.pth"
     torch.save(model.state_dict(), checkpoint_path)
     return checkpoint_path
 
@@ -353,6 +358,7 @@ def train_distillation_batched(
     sort_by_length=True,
     checkpoint_dir=CHECKPOINT_DIR,
     csv_log_path=CSV_LOG_PATH,
+    checkpoint_prefix=CHECKPOINT_PREFIX,
 ):
     optimizer = torch.optim.AdamW(model.parameters(), lr = lr)
 
@@ -371,6 +377,9 @@ def train_distillation_batched(
     rng = random.Random(seed)
     start_time = time.time()
     csv_log_path = Path(csv_log_path)
+    checkpoint_dir = Path(checkpoint_dir)
+    best_val_loss = float("inf")
+    best_checkpoint_path = None
 
     for epoch in range(1, epochs+1):
         epoch_examples = list(train_examples)
@@ -387,21 +396,20 @@ def train_distillation_batched(
             step_start = time.time()
             optimizer.zero_grad()
 
-
+            batch_size_actual = len(batch_examples)
             loss, supervised_tokens = compute_batch_loss(
                 model=model,
                 batch_examples=batch_examples,
                 pad_id=pad_id,
                 device=device,
             )
-        
             loss.backward()
+            step_loss_value = loss.item()
             if grad_clip_norm is not None:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), grad_clip_norm)
             optimizer.step()
 
-            batch_size_actual = len(batch_examples)
-            epoch_train_loss += loss.item() * batch_size_actual
+            epoch_train_loss += step_loss_value * batch_size_actual
             epoch_example_count += batch_size_actual
             step_time = time.time() - step_start
             step_tokens_per_sec = (
@@ -431,7 +439,7 @@ def train_distillation_batched(
                     eta_value = "--"
                 print(
                     f"[Epoch {epoch}/{epochs} Step {global_step}/{total_steps}] "
-                    f"train_loss={loss.item():.4f} "
+                    f"train_loss={step_loss_value:.4f} "
                     f"val_loss={val_loss:.4f} "
                     f"tok/sec={step_tokens_per_sec:.1f} | "
                     f"ETA: {eta_value}",
@@ -441,9 +449,23 @@ def train_distillation_batched(
                     csv_log_path=csv_log_path,
                     epoch_idx=epoch,
                     total_steps=global_step,
-                    train_loss=loss.item(),
+                    train_loss=step_loss_value,
                     val_loss=val_loss,
                 )
+                if val_loss < best_val_loss:
+                    best_val_loss = val_loss
+                    best_checkpoint_path = save_checkpoint(
+                        model=model,
+                        checkpoint_dir=checkpoint_dir,
+                        step=global_step,
+                        suffix="bestval",
+                        checkpoint_prefix=checkpoint_prefix,
+                    )
+                    print(
+                        f"Saved best-val checkpoint to {best_checkpoint_path} "
+                        f"(val_loss={best_val_loss:.4f})",
+                        flush=True,
+                    )
 
         avg_train_loss = epoch_train_loss / epoch_example_count
         val_loss = evaluate_examples_batched(
@@ -466,9 +488,30 @@ def train_distillation_batched(
             checkpoint_dir=checkpoint_dir,
             step=global_step,
             suffix=f"epoch{epoch}",
+            checkpoint_prefix=checkpoint_prefix,
         )
         print(f"Saved checkpoint to {checkpoint_path}", flush=True)
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            best_checkpoint_path = save_checkpoint(
+                model=model,
+                checkpoint_dir=checkpoint_dir,
+                step=global_step,
+                suffix="bestval",
+                checkpoint_prefix=checkpoint_prefix,
+            )
+            print(
+                f"Saved best-val checkpoint to {best_checkpoint_path} "
+                f"(val_loss={best_val_loss:.4f})",
+                flush=True,
+            )
 
+    if best_checkpoint_path is not None:
+        print(
+            f"Best validation checkpoint: {best_checkpoint_path} "
+            f"(val_loss={best_val_loss:.4f})",
+            flush=True,
+        )
     return model
 
 
@@ -543,6 +586,13 @@ def parse_args():
         ),
     )
     parser.add_argument(
+        "--runtime",
+        type=str,
+        default="scratch",
+        choices=["scratch", "hf"],
+        help="Model runtime. 'hf' uses Transformers AutoModelForCausalLM with SDPA.",
+    )
+    parser.add_argument(
         "--grad_clip_norm",
         "--grad_clip",
         dest="grad_clip_norm",
@@ -572,6 +622,34 @@ def parse_args():
         action="store_true",
         help="Disable length-based sorting before batching.",
     )
+    parser.add_argument(
+        "--output_root",
+        type=str,
+        default=str(DEFAULT_OUTPUT_ROOT),
+        help=(
+            "Root directory for run artifacts. Used to derive logs/, "
+            "checkpoints/, evals/, and reports/ paths unless more specific "
+            "path arguments are supplied."
+        ),
+    )
+    parser.add_argument(
+        "--checkpoint_dir",
+        type=str,
+        default=None,
+        help="Directory for epoch and best-val checkpoints.",
+    )
+    parser.add_argument(
+        "--csv_log_path",
+        type=str,
+        default=None,
+        help="CSV metrics path.",
+    )
+    parser.add_argument(
+        "--checkpoint_prefix",
+        type=str,
+        default=CHECKPOINT_PREFIX,
+        help="Filename prefix for saved checkpoints.",
+    )
     return parser.parse_args()
 
 
@@ -596,7 +674,13 @@ def main():
 
     tokenizer_variant = "reasoning" if args.use_think_tokens else "base"
     tokenizer = load_tokenizer_only(which_model=tokenizer_variant)
-    if checkpoint_path is not None:
+    if args.runtime == "hf":
+        model = HFQwenScratchCompat(
+            checkpoint_path=checkpoint_path,
+            device=device,
+            attn_implementation="sdpa",
+        )
+    elif checkpoint_path is not None:
         model = Qwen3Model(QWEN_CONFIG_06_B, float32_upcast=False)
         state_dict = torch.load(checkpoint_path, map_location="cpu")
         model.load_state_dict(state_dict)
@@ -610,12 +694,35 @@ def main():
         )
 
     print("Model variant: base")
+    print("Runtime:", args.runtime)
     print("Tokenizer variant:", tokenizer_variant)
     print("Use think tokens:", args.use_think_tokens)
     print("Batch size:", args.batch_size)
     print("Length sorting:", not args.no_sorting)
     print("Grad clip norm:", args.grad_clip_norm)
     print("Checkpoint path:", checkpoint_path if checkpoint_path is not None else "--")
+    output_root = Path(args.output_root)
+    checkpoint_dir = (
+        Path(args.checkpoint_dir)
+        if args.checkpoint_dir is not None
+        else output_root / "checkpoints"
+    )
+    csv_log_path = (
+        Path(args.csv_log_path)
+        if args.csv_log_path is not None
+        else output_root / "logs" / f"{SCRIPT_NAME}_metrics.csv"
+    )
+    for artifact_dir in [
+        output_root / "logs",
+        checkpoint_dir,
+        output_root / "evals",
+        output_root / "reports",
+    ]:
+        artifact_dir.mkdir(parents=True, exist_ok=True)
+    print("Output root:", output_root)
+    print("CSV log path:", csv_log_path)
+    print("Checkpoint dir:", checkpoint_dir)
+    print("Checkpoint prefix:", args.checkpoint_prefix)
 
     raw_row_count = len(data)
     all_examples, skipped_rows = build_examples(
@@ -671,8 +778,9 @@ def main():
         log_every=args.log_every,
         grad_clip_norm=args.grad_clip_norm,
         sort_by_length=not args.no_sorting,
-        checkpoint_dir=CHECKPOINT_DIR,
-        csv_log_path=CSV_LOG_PATH,
+        checkpoint_dir=checkpoint_dir,
+        csv_log_path=csv_log_path,
+        checkpoint_prefix=args.checkpoint_prefix,
     )
     elapsed_minutes = (time.perf_counter() - start) / 60
     print(f"Training completed in {elapsed_minutes:.2f} minutes.")
@@ -684,4 +792,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
