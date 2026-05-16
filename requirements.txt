@@ -1,0 +1,8 @@
+torch>=2.6
+transformers>=4.45
+reasoning-from-scratch>=0.1.21
+numpy
+requests
+sympy
+tokenizers
+matplotlib
