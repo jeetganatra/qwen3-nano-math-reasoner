@@ -1,11 +1,11 @@
 """Generate per-run training curve plots and a combined eval-results table.
 
 For each registered run, produces:
-- remote_artifacts/training_curves_<run_name>.png  (6-panel training metrics)
+- results/training_curves_<run_name>.png  (6-panel training metrics)
 
 And once across all runs:
-- remote_artifacts/eval_summary.md       (markdown table)
-- remote_artifacts/eval_summary.csv      (same data, machine-readable)
+- results/eval_summary.md       (markdown table)
+- results/eval_summary.csv      (same data, machine-readable)
 """
 from pathlib import Path
 
@@ -13,14 +13,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-REPO = Path(__file__).parent
-OUT_DIR = REPO / "remote_artifacts"
+REPO = Path(__file__).parent.parent
+OUT_DIR = REPO / "results"
 
 RUNS = [
     {
-        "name": "logp_batched",
-        "label": "qwen_grpo_logp_batched.py (num_rollouts=8, max_new_tokens=768)",
-        "csv": REPO / "remote_artifacts/qwen_grpo_logp_batched/logs/qwen_grpo_logp_batched_metrics.csv",
+        "name": "grpo_from_base",
+        "label": "src/qwen_grpo.py (num_rollouts=8, max_new_tokens=768)",
+        "csv": REPO / "results/grpo_from_base/logs/qwen_grpo_logp_batched_metrics.csv",
         "color": "tab:orange",
         "max_new_tokens": 768,
     },

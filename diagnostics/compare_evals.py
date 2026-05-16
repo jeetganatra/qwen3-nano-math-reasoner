@@ -98,10 +98,11 @@ def parse_args():
 def default_evals():
     """If user doesn't pass --eval, look for common file names."""
     candidates = [
-        ("base", "remote_artifacts/qwen_distill/evals/eval_base.jsonl"),
-        ("distilled", "remote_artifacts/qwen_distill/evals/eval_distilled.jsonl"),
-        ("qwen_reasoning", "remote_artifacts/qwen_distill/evals/eval_qwen_reasoning.jsonl"),
-        ("grpo", "remote_artifacts/qwen_grpo_logp_batched/evals/eval_grpo.jsonl"),
+        ("base", "results/sft_deepseek/evals/eval_base.jsonl"),
+        ("distilled", "results/sft_deepseek/evals/eval_distilled.jsonl"),
+        ("qwen_reasoning", "results/sft_deepseek/evals/eval_qwen_reasoning.jsonl"),
+        ("qwen_sft", "results/sft_qwen/evals/eval.jsonl"),
+        ("grpo", "results/grpo_from_base/evals/grpo_step00050-math500.jsonl"),
     ]
     return [(label, path) for label, path in candidates if Path(path).exists()]
 
@@ -121,7 +122,7 @@ def main():
         if not evals:
             raise SystemExit(
                 "No eval files found. Pass --eval label=path.jsonl, or place "
-                "files at remote_artifacts/evals/eval_*.jsonl"
+                "files under results/<run>/evals/eval_*.jsonl"
             )
 
     summaries = []

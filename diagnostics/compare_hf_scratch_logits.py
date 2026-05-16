@@ -1,4 +1,9 @@
 import argparse
+import sys
+from pathlib import Path
+
+# Allow importing the trainer/runtime modules that live under src/
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 import torch
 

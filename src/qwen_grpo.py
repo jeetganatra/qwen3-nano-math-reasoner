@@ -46,10 +46,11 @@ from reasoning_from_scratch.ch06 import (
 from reasoning_from_scratch.qwen3 import KVCache, Qwen3Model, QWEN_CONFIG_06_B
 
 SCRIPT_NAME = Path(__file__).stem
-LOG_PATH = Path(__file__).parent / "logs" / f"{SCRIPT_NAME}_outputs.txt"
-METRICS_LOG_PATH = Path(__file__).parent / "logs" / f"{SCRIPT_NAME}_metrics.txt"
-CSV_LOG_PATH = Path(__file__).parent / "logs" / f"{SCRIPT_NAME}_metrics.csv"
-CHECKPOINT_DIR = Path(__file__).parent / "checkpoints" / SCRIPT_NAME
+REPO_ROOT = Path(__file__).parent.parent
+LOG_PATH = REPO_ROOT / "logs" / f"{SCRIPT_NAME}_outputs.txt"
+METRICS_LOG_PATH = REPO_ROOT / "logs" / f"{SCRIPT_NAME}_metrics.txt"
+CSV_LOG_PATH = REPO_ROOT / "logs" / f"{SCRIPT_NAME}_metrics.csv"
+CHECKPOINT_DIR = REPO_ROOT / "checkpoints" / SCRIPT_NAME
 
 
 def configure_output_paths(output_dir=None, log_dir=None, checkpoint_dir=None):

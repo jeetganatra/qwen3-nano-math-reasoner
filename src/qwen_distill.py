@@ -94,7 +94,7 @@ def render_prompt(prompt):
 
 SCRIPT_NAME = Path(__file__).stem
 DEFAULT_OUTPUT_ROOT = (
-    Path(__file__).parent / "remote_artifacts" / "qwen_sft_235b_a22b_12k"
+    Path(__file__).parent.parent / "results" / "sft_qwen"
 )
 CSV_LOG_PATH = DEFAULT_OUTPUT_ROOT / "logs" / f"{SCRIPT_NAME}_metrics.csv"
 CHECKPOINT_DIR = DEFAULT_OUTPUT_ROOT / "checkpoints"

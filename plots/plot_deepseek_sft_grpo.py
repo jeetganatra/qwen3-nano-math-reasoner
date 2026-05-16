@@ -5,10 +5,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 
 
-ROOT = Path(__file__).parent
-RUN_DIR = ROOT / "remote_artifacts" / "deepseek_sft_grpo"
-OUT_PNG = ROOT / "remote_artifacts" / "training_curves_deepseek_sft_grpo.png"
-OUT_REPORT = ROOT / "remote_artifacts" / "deepseek_sft_grpo_report.md"
+ROOT = Path(__file__).parent.parent
+RUN_DIR = ROOT / "results" / "sft_deepseek_then_grpo"
+OUT_PNG = ROOT / "results" / "training_curves_sft_deepseek_then_grpo.png"
+OUT_REPORT = ROOT / "results" / "sft_deepseek_then_grpo_report.md"
 
 
 def read_metrics(path):
@@ -109,10 +109,10 @@ def main():
     metrics = read_metrics(metrics_path)
     plot(metrics)
 
-    eval50 = read_eval(RUN_DIR / "checkpoints" / "qwen_grpo_logp_batched-step00050-math500.jsonl")
-    eval100 = read_eval(RUN_DIR / "checkpoints" / "qwen_grpo_logp_batched-step00100-math500.jsonl")
-    base_grpo50 = maybe_eval(ROOT / "remote_artifacts" / "qwen_grpo_logp_batched" / "checkpoints" / "qwen_grpo_logp_batched-step00050-math500.jsonl")
-    base_grpo100 = maybe_eval(ROOT / "remote_artifacts" / "qwen_grpo_logp_batched" / "checkpoints" / "qwen_grpo_logp_batched-step00100-math500.jsonl")
+    eval50 = read_eval(RUN_DIR / "evals" / "grpo_step00050-math500.jsonl")
+    eval100 = read_eval(RUN_DIR / "evals" / "grpo_step00100-math500.jsonl")
+    base_grpo50 = maybe_eval(ROOT / "results" / "grpo_from_base" / "evals" / "grpo_step00050-math500.jsonl")
+    base_grpo100 = maybe_eval(ROOT / "results" / "grpo_from_base" / "evals" / "grpo_step00100-math500.jsonl")
 
     rows = [
         ("DeepSeek-SFT seed", "epoch 3", "34.6%", "Full MATH-500 result from prior eval_distilled.jsonl"),
@@ -132,7 +132,7 @@ def main():
         "## Decision",
         "",
         "Stopped after the step-100 eval because the continuation degraded from step 50.",
-        "The selected checkpoint is `remote_artifacts/deepseek_sft_grpo/checkpoints/qwen3-0.6B-rlvr-grpo-step00050.pth`.",
+        "The selected checkpoint is `results/sft_deepseek_then_grpo/checkpoints/qwen3-0.6B-rlvr-grpo-step00050.pth`.",
         "",
         "## Checkpoint comparison",
         "",
@@ -154,8 +154,8 @@ def main():
         "## Artifacts",
         "",
         f"- Plot: `{OUT_PNG.relative_to(ROOT)}`",
-        "- Main run logs: `remote_artifacts/deepseek_sft_grpo/logs/`",
-        "- Per-checkpoint MATH-500 evals: `remote_artifacts/deepseek_sft_grpo/checkpoints/qwen_grpo_logp_batched-step*-math500.jsonl`",
+        "- Main run logs: `results/sft_deepseek_then_grpo/logs/`",
+        "- Per-checkpoint MATH-500 evals: `results/sft_deepseek_then_grpo/evals/grpo_step*-math500.jsonl`",
         "",
         "## Eval Points From CSV",
         "",
