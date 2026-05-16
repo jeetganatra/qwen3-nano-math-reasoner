@@ -1,0 +1,267 @@
+Using NVIDIA CUDA GPU
+Device: cuda
+Dataset size: 11965
+✓ qwen3/tokenizer-reasoning.json already up-to-date
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+✓ qwen3/qwen3-0.6B-base.pth already up-to-date
+Model variant: base
+Runtime: hf
+Tokenizer variant: reasoning
+Use think tokens: True
+Thinking only: False
+Batch size: 2
+Micro batch size: 2
+Length sorting: True
+Grad clip norm: 1.0
+Checkpoint path: --
+Output root: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf
+CSV log path: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/logs/qwen_distill_metrics.csv
+Checkpoint dir: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints
+Checkpoint prefix: qwen3-0.6B-qwen235b-maxlen2048-hf
+Raw dataset rows: 11965
+Skipped rows during preprocessing (invalid, empty, or malformed rows): 0
+Examples after tokenization: 11965
+Examples filtered by max_seq_len=2048: 6244
+Prepared examples after preprocessing (total/train/val): 5721 5696 25
+[Epoch 1/3 Step 50/8544] train_loss=0.3259 val_loss=0.4408 tok/sec=1267.7 | ETA: 1h 04m 52s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00050-bestval.pth (val_loss=0.4408)
+[Epoch 1/3 Step 100/8544] train_loss=0.3001 val_loss=0.4113 tok/sec=1635.6 | ETA: 1h 04m 28s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00100-bestval.pth (val_loss=0.4113)
+[Epoch 1/3 Step 150/8544] train_loss=0.3299 val_loss=0.3948 tok/sec=1770.9 | ETA: 1h 04m 07s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00150-bestval.pth (val_loss=0.3948)
+[Epoch 1/3 Step 200/8544] train_loss=0.3801 val_loss=0.3811 tok/sec=1844.3 | ETA: 1h 03m 45s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00200-bestval.pth (val_loss=0.3811)
+[Epoch 1/3 Step 250/8544] train_loss=0.2235 val_loss=0.3707 tok/sec=2165.3 | ETA: 1h 03m 18s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00250-bestval.pth (val_loss=0.3707)
+[Epoch 1/3 Step 300/8544] train_loss=0.3050 val_loss=0.3653 tok/sec=2244.7 | ETA: 1h 02m 57s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00300-bestval.pth (val_loss=0.3653)
+[Epoch 1/3 Step 350/8544] train_loss=0.1793 val_loss=0.3573 tok/sec=2288.2 | ETA: 1h 02m 38s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00350-bestval.pth (val_loss=0.3573)
+[Epoch 1/3 Step 400/8544] train_loss=0.3972 val_loss=0.3539 tok/sec=2126.7 | ETA: 1h 02m 16s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00400-bestval.pth (val_loss=0.3539)
+[Epoch 1/3 Step 450/8544] train_loss=0.4741 val_loss=0.3498 tok/sec=2492.5 | ETA: 1h 01m 56s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00450-bestval.pth (val_loss=0.3498)
+[Epoch 1/3 Step 500/8544] train_loss=0.4127 val_loss=0.3435 tok/sec=2514.2 | ETA: 1h 01m 35s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00500-bestval.pth (val_loss=0.3435)
+[Epoch 1/3 Step 550/8544] train_loss=0.2500 val_loss=0.3403 tok/sec=2569.5 | ETA: 1h 01m 15s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00550-bestval.pth (val_loss=0.3403)
+[Epoch 1/3 Step 600/8544] train_loss=0.7557 val_loss=0.3376 tok/sec=2755.6 | ETA: 1h 00m 56s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00600-bestval.pth (val_loss=0.3376)
+[Epoch 1/3 Step 650/8544] train_loss=0.2861 val_loss=0.3346 tok/sec=2740.6 | ETA: 1h 00m 34s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00650-bestval.pth (val_loss=0.3346)
+[Epoch 1/3 Step 700/8544] train_loss=0.3588 val_loss=0.3321 tok/sec=2864.9 | ETA: 1h 00m 04s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00700-bestval.pth (val_loss=0.3321)
+[Epoch 1/3 Step 750/8544] train_loss=0.2670 val_loss=0.3305 tok/sec=2943.0 | ETA: 59m 39s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00750-bestval.pth (val_loss=0.3305)
+[Epoch 1/3 Step 800/8544] train_loss=0.2003 val_loss=0.3288 tok/sec=3264.7 | ETA: 59m 20s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00800-bestval.pth (val_loss=0.3288)
+[Epoch 1/3 Step 850/8544] train_loss=0.2014 val_loss=0.3270 tok/sec=3429.9 | ETA: 58m 59s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00850-bestval.pth (val_loss=0.3270)
+[Epoch 1/3 Step 900/8544] train_loss=0.1991 val_loss=0.3247 tok/sec=3554.3 | ETA: 58m 40s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00900-bestval.pth (val_loss=0.3247)
+[Epoch 1/3 Step 950/8544] train_loss=0.2681 val_loss=0.3223 tok/sec=3478.7 | ETA: 58m 19s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step00950-bestval.pth (val_loss=0.3223)
+[Epoch 1/3 Step 1000/8544] train_loss=0.4553 val_loss=0.3220 tok/sec=3390.5 | ETA: 57m 59s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01000-bestval.pth (val_loss=0.3220)
+[Epoch 1/3 Step 1050/8544] train_loss=0.2878 val_loss=0.3199 tok/sec=3506.9 | ETA: 57m 38s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01050-bestval.pth (val_loss=0.3199)
+[Epoch 1/3 Step 1100/8544] train_loss=0.6150 val_loss=0.3182 tok/sec=3947.1 | ETA: 57m 15s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01100-bestval.pth (val_loss=0.3182)
+[Epoch 1/3 Step 1150/8544] train_loss=0.3757 val_loss=0.3161 tok/sec=3863.8 | ETA: 56m 56s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01150-bestval.pth (val_loss=0.3161)
+[Epoch 1/3 Step 1200/8544] train_loss=0.1872 val_loss=0.3158 tok/sec=4025.6 | ETA: 56m 34s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01200-bestval.pth (val_loss=0.3158)
+[Epoch 1/3 Step 1250/8544] train_loss=0.3128 val_loss=0.3146 tok/sec=3968.3 | ETA: 56m 16s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01250-bestval.pth (val_loss=0.3146)
+[Epoch 1/3 Step 1300/8544] train_loss=0.4377 val_loss=0.3140 tok/sec=4360.3 | ETA: 55m 58s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01300-bestval.pth (val_loss=0.3140)
+[Epoch 1/3 Step 1350/8544] train_loss=0.2489 val_loss=0.3126 tok/sec=4199.0 | ETA: 55m 40s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01350-bestval.pth (val_loss=0.3126)
+[Epoch 1/3 Step 1400/8544] train_loss=0.2271 val_loss=0.3125 tok/sec=4620.6 | ETA: 55m 21s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01400-bestval.pth (val_loss=0.3125)
+[Epoch 1/3 Step 1450/8544] train_loss=0.6676 val_loss=0.3134 tok/sec=4682.5 | ETA: 55m 01s
+[Epoch 1/3 Step 1500/8544] train_loss=0.3083 val_loss=0.3105 tok/sec=4493.6 | ETA: 54m 36s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01500-bestval.pth (val_loss=0.3105)
+[Epoch 1/3 Step 1550/8544] train_loss=0.4572 val_loss=0.3092 tok/sec=4866.4 | ETA: 54m 17s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01550-bestval.pth (val_loss=0.3092)
+[Epoch 1/3 Step 1600/8544] train_loss=0.1154 val_loss=0.3088 tok/sec=4535.1 | ETA: 54m 00s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01600-bestval.pth (val_loss=0.3088)
+[Epoch 1/3 Step 1650/8544] train_loss=0.1762 val_loss=0.3096 tok/sec=4982.2 | ETA: 53m 41s
+[Epoch 1/3 Step 1700/8544] train_loss=0.2483 val_loss=0.3081 tok/sec=4963.0 | ETA: 53m 17s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01700-bestval.pth (val_loss=0.3081)
+[Epoch 1/3 Step 1750/8544] train_loss=0.5102 val_loss=0.3075 tok/sec=5416.0 | ETA: 52m 59s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01750-bestval.pth (val_loss=0.3075)
+[Epoch 1/3 Step 1800/8544] train_loss=0.1369 val_loss=0.3084 tok/sec=5413.7 | ETA: 52m 40s
+[Epoch 1/3 Step 1850/8544] train_loss=0.4112 val_loss=0.3063 tok/sec=5579.4 | ETA: 52m 17s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01850-bestval.pth (val_loss=0.3063)
+[Epoch 1/3 Step 1900/8544] train_loss=0.1882 val_loss=0.3060 tok/sec=5690.3 | ETA: 51m 59s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01900-bestval.pth (val_loss=0.3060)
+[Epoch 1/3 Step 1950/8544] train_loss=0.4054 val_loss=0.3060 tok/sec=6191.5 | ETA: 51m 38s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step01950-bestval.pth (val_loss=0.3060)
+[Epoch 1/3 Step 2000/8544] train_loss=0.4064 val_loss=0.3055 tok/sec=6225.8 | ETA: 51m 18s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step02000-bestval.pth (val_loss=0.3055)
+[Epoch 1/3 Step 2050/8544] train_loss=0.5509 val_loss=0.3045 tok/sec=5627.3 | ETA: 50m 59s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step02050-bestval.pth (val_loss=0.3045)
+[Epoch 1/3 Step 2100/8544] train_loss=0.4794 val_loss=0.3053 tok/sec=6517.1 | ETA: 50m 41s
+[Epoch 1/3 Step 2150/8544] train_loss=0.3357 val_loss=0.3054 tok/sec=6398.3 | ETA: 50m 19s
+[Epoch 1/3 Step 2200/8544] train_loss=0.3861 val_loss=0.3053 tok/sec=6740.6 | ETA: 49m 57s
+[Epoch 1/3 Step 2250/8544] train_loss=0.3220 val_loss=0.3052 tok/sec=6877.9 | ETA: 49m 36s
+[Epoch 1/3 Step 2300/8544] train_loss=0.2067 val_loss=0.3038 tok/sec=6986.5 | ETA: 49m 15s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step02300-bestval.pth (val_loss=0.3038)
+[Epoch 1/3 Step 2350/8544] train_loss=0.3873 val_loss=0.3055 tok/sec=7106.4 | ETA: 48m 58s
+[Epoch 1/3 Step 2400/8544] train_loss=0.5233 val_loss=0.3048 tok/sec=7113.4 | ETA: 48m 38s
+[Epoch 1/3 Step 2450/8544] train_loss=0.2517 val_loss=0.3051 tok/sec=7255.1 | ETA: 48m 17s
+[Epoch 1/3 Step 2500/8544] train_loss=0.3867 val_loss=0.3049 tok/sec=7558.6 | ETA: 47m 57s
+[Epoch 1/3 Step 2550/8544] train_loss=0.6380 val_loss=0.3042 tok/sec=6911.5 | ETA: 47m 37s
+[Epoch 1/3 Step 2600/8544] train_loss=0.7054 val_loss=0.3053 tok/sec=7772.9 | ETA: 47m 18s
+[Epoch 1/3 Step 2650/8544] train_loss=0.4629 val_loss=0.3055 tok/sec=7841.5 | ETA: 47m 00s
+[Epoch 1/3 Step 2700/8544] train_loss=0.6194 val_loss=0.3047 tok/sec=7030.2 | ETA: 46m 40s
+[Epoch 1/3 Step 2750/8544] train_loss=0.2823 val_loss=0.3041 tok/sec=7147.5 | ETA: 46m 23s
+[Epoch 1/3 Step 2800/8544] train_loss=0.3398 val_loss=0.3045 tok/sec=7268.3 | ETA: 46m 05s
+Saved checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step02848-epoch1.pth
+[Epoch 2/3 Step 2850/8544] train_loss=0.6446 val_loss=0.3061 tok/sec=622.7 | ETA: 45m 54s
+[Epoch 2/3 Step 2900/8544] train_loss=0.2351 val_loss=0.3054 tok/sec=1314.8 | ETA: 45m 24s
+[Epoch 2/3 Step 2950/8544] train_loss=0.1267 val_loss=0.3044 tok/sec=1596.1 | ETA: 44m 54s
+[Epoch 2/3 Step 3000/8544] train_loss=0.1454 val_loss=0.3044 tok/sec=1833.6 | ETA: 44m 24s
+[Epoch 2/3 Step 3050/8544] train_loss=0.1517 val_loss=0.3041 tok/sec=1919.1 | ETA: 43m 55s
+[Epoch 2/3 Step 3100/8544] train_loss=0.0951 val_loss=0.3032 tok/sec=2151.9 | ETA: 43m 26s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03100-bestval.pth (val_loss=0.3032)
+[Epoch 2/3 Step 3150/8544] train_loss=0.1986 val_loss=0.3029 tok/sec=2194.6 | ETA: 43m 00s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03150-bestval.pth (val_loss=0.3029)
+[Epoch 2/3 Step 3200/8544] train_loss=0.1543 val_loss=0.3023 tok/sec=2304.9 | ETA: 42m 34s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03200-bestval.pth (val_loss=0.3023)
+[Epoch 2/3 Step 3250/8544] train_loss=0.2132 val_loss=0.3021 tok/sec=2374.6 | ETA: 42m 07s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03250-bestval.pth (val_loss=0.3021)
+[Epoch 2/3 Step 3300/8544] train_loss=0.1616 val_loss=0.3011 tok/sec=2500.7 | ETA: 41m 42s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03300-bestval.pth (val_loss=0.3011)
+[Epoch 2/3 Step 3350/8544] train_loss=0.2047 val_loss=0.3012 tok/sec=2674.5 | ETA: 41m 16s
+[Epoch 2/3 Step 3400/8544] train_loss=0.1911 val_loss=0.2997 tok/sec=2742.6 | ETA: 40m 49s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03400-bestval.pth (val_loss=0.2997)
+[Epoch 2/3 Step 3450/8544] train_loss=0.1396 val_loss=0.3004 tok/sec=2892.3 | ETA: 40m 23s
+[Epoch 2/3 Step 3500/8544] train_loss=0.1893 val_loss=0.2996 tok/sec=2859.6 | ETA: 39m 56s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03500-bestval.pth (val_loss=0.2996)
+[Epoch 2/3 Step 3550/8544] train_loss=0.2570 val_loss=0.2986 tok/sec=2938.8 | ETA: 39m 31s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03550-bestval.pth (val_loss=0.2986)
+[Epoch 2/3 Step 3600/8544] train_loss=0.2515 val_loss=0.2985 tok/sec=3141.3 | ETA: 39m 06s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03600-bestval.pth (val_loss=0.2985)
+[Epoch 2/3 Step 3650/8544] train_loss=0.2387 val_loss=0.2979 tok/sec=3019.1 | ETA: 38m 41s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03650-bestval.pth (val_loss=0.2979)
+[Epoch 2/3 Step 3700/8544] train_loss=0.2061 val_loss=0.2992 tok/sec=3302.2 | ETA: 38m 16s
+[Epoch 2/3 Step 3750/8544] train_loss=0.3097 val_loss=0.2977 tok/sec=3394.1 | ETA: 37m 50s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03750-bestval.pth (val_loss=0.2977)
+[Epoch 2/3 Step 3800/8544] train_loss=0.2779 val_loss=0.2979 tok/sec=3479.9 | ETA: 37m 26s
+[Epoch 2/3 Step 3850/8544] train_loss=0.2678 val_loss=0.2978 tok/sec=3288.8 | ETA: 37m 00s
+[Epoch 2/3 Step 3900/8544] train_loss=0.3786 val_loss=0.2976 tok/sec=3624.2 | ETA: 36m 34s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03900-bestval.pth (val_loss=0.2976)
+[Epoch 2/3 Step 3950/8544] train_loss=0.3379 val_loss=0.2969 tok/sec=3687.4 | ETA: 36m 11s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step03950-bestval.pth (val_loss=0.2969)
+[Epoch 2/3 Step 4000/8544] train_loss=0.2788 val_loss=0.2963 tok/sec=3876.5 | ETA: 35m 48s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step04000-bestval.pth (val_loss=0.2963)
+[Epoch 2/3 Step 4050/8544] train_loss=0.2933 val_loss=0.2965 tok/sec=3989.4 | ETA: 35m 24s
+[Epoch 2/3 Step 4100/8544] train_loss=0.2649 val_loss=0.2964 tok/sec=3988.1 | ETA: 34m 59s
+[Epoch 2/3 Step 4150/8544] train_loss=0.4571 val_loss=0.2969 tok/sec=3617.4 | ETA: 34m 34s
+[Epoch 2/3 Step 4200/8544] train_loss=0.2396 val_loss=0.2963 tok/sec=3878.2 | ETA: 34m 10s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step04200-bestval.pth (val_loss=0.2963)
+[Epoch 2/3 Step 4250/8544] train_loss=0.3054 val_loss=0.2964 tok/sec=4622.1 | ETA: 33m 47s
+[Epoch 2/3 Step 4300/8544] train_loss=0.4722 val_loss=0.2975 tok/sec=4637.6 | ETA: 33m 22s
+[Epoch 2/3 Step 4350/8544] train_loss=0.2135 val_loss=0.2965 tok/sec=4585.6 | ETA: 32m 58s
+[Epoch 2/3 Step 4400/8544] train_loss=0.1800 val_loss=0.2956 tok/sec=4856.6 | ETA: 32m 34s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step04400-bestval.pth (val_loss=0.2956)
+[Epoch 2/3 Step 4450/8544] train_loss=0.4792 val_loss=0.2962 tok/sec=4078.1 | ETA: 32m 11s
+[Epoch 2/3 Step 4500/8544] train_loss=0.3902 val_loss=0.2962 tok/sec=4780.4 | ETA: 31m 47s
+[Epoch 2/3 Step 4550/8544] train_loss=0.1845 val_loss=0.2961 tok/sec=5296.1 | ETA: 31m 23s
+[Epoch 2/3 Step 4600/8544] train_loss=0.2360 val_loss=0.2965 tok/sec=5307.3 | ETA: 30m 59s
+[Epoch 2/3 Step 4650/8544] train_loss=0.1669 val_loss=0.2964 tok/sec=5640.4 | ETA: 30m 35s
+[Epoch 2/3 Step 4700/8544] train_loss=0.2430 val_loss=0.2953 tok/sec=5134.3 | ETA: 30m 12s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step04700-bestval.pth (val_loss=0.2953)
+[Epoch 2/3 Step 4750/8544] train_loss=0.5367 val_loss=0.2960 tok/sec=5757.1 | ETA: 29m 49s
+[Epoch 2/3 Step 4800/8544] train_loss=0.2656 val_loss=0.2961 tok/sec=6012.6 | ETA: 29m 26s
+[Epoch 2/3 Step 4850/8544] train_loss=0.4781 val_loss=0.2961 tok/sec=5673.6 | ETA: 29m 02s
+[Epoch 2/3 Step 4900/8544] train_loss=0.3379 val_loss=0.2958 tok/sec=6227.7 | ETA: 28m 39s
+[Epoch 2/3 Step 4950/8544] train_loss=0.1043 val_loss=0.2964 tok/sec=6157.1 | ETA: 28m 16s
+[Epoch 2/3 Step 5000/8544] train_loss=0.3226 val_loss=0.2963 tok/sec=5923.8 | ETA: 27m 52s
+[Epoch 2/3 Step 5050/8544] train_loss=0.2482 val_loss=0.2963 tok/sec=4273.4 | ETA: 27m 29s
+[Epoch 2/3 Step 5100/8544] train_loss=0.4667 val_loss=0.2970 tok/sec=6841.4 | ETA: 27m 06s
+[Epoch 2/3 Step 5150/8544] train_loss=0.6203 val_loss=0.2956 tok/sec=6550.7 | ETA: 26m 43s
+[Epoch 2/3 Step 5200/8544] train_loss=0.3885 val_loss=0.2970 tok/sec=6983.0 | ETA: 26m 20s
+[Epoch 2/3 Step 5250/8544] train_loss=0.5206 val_loss=0.2972 tok/sec=7182.6 | ETA: 25m 58s
+[Epoch 2/3 Step 5300/8544] train_loss=0.4546 val_loss=0.2971 tok/sec=7254.3 | ETA: 25m 35s
+[Epoch 2/3 Step 5350/8544] train_loss=0.5620 val_loss=0.2972 tok/sec=7549.8 | ETA: 25m 12s
+[Epoch 2/3 Step 5400/8544] train_loss=0.3705 val_loss=0.2971 tok/sec=6937.0 | ETA: 24m 49s
+[Epoch 2/3 Step 5450/8544] train_loss=0.3062 val_loss=0.2980 tok/sec=7886.5 | ETA: 24m 27s
+[Epoch 2/3 Step 5500/8544] train_loss=0.3222 val_loss=0.2983 tok/sec=7907.4 | ETA: 24m 05s
+[Epoch 2/3 Step 5550/8544] train_loss=0.7032 val_loss=0.2982 tok/sec=8070.5 | ETA: 23m 42s
+[Epoch 2/3 Step 5600/8544] train_loss=0.6212 val_loss=0.2972 tok/sec=8384.9 | ETA: 23m 20s
+[Epoch 2/3 Step 5650/8544] train_loss=0.2097 val_loss=0.2973 tok/sec=8366.2 | ETA: 22m 57s
+Saved checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step05696-epoch2.pth
+[Epoch 3/3 Step 5700/8544] train_loss=0.3424 val_loss=0.2974 tok/sec=660.4 | ETA: 22m 37s
+[Epoch 3/3 Step 5750/8544] train_loss=0.2007 val_loss=0.2983 tok/sec=1402.9 | ETA: 22m 12s
+[Epoch 3/3 Step 5800/8544] train_loss=0.3398 val_loss=0.2986 tok/sec=1700.6 | ETA: 21m 47s
+[Epoch 3/3 Step 5850/8544] train_loss=0.2365 val_loss=0.2984 tok/sec=1835.7 | ETA: 21m 22s
+[Epoch 3/3 Step 5900/8544] train_loss=0.2577 val_loss=0.2984 tok/sec=1934.9 | ETA: 20m 57s
+[Epoch 3/3 Step 5950/8544] train_loss=0.1216 val_loss=0.2978 tok/sec=2118.8 | ETA: 20m 32s
+[Epoch 3/3 Step 6000/8544] train_loss=0.1861 val_loss=0.2969 tok/sec=2074.2 | ETA: 20m 07s
+[Epoch 3/3 Step 6050/8544] train_loss=0.1199 val_loss=0.2972 tok/sec=2340.6 | ETA: 19m 43s
+[Epoch 3/3 Step 6100/8544] train_loss=0.3050 val_loss=0.2975 tok/sec=2230.6 | ETA: 19m 18s
+[Epoch 3/3 Step 6150/8544] train_loss=0.3230 val_loss=0.2968 tok/sec=2338.3 | ETA: 18m 54s
+[Epoch 3/3 Step 6200/8544] train_loss=0.1852 val_loss=0.2962 tok/sec=2663.8 | ETA: 18m 29s
+[Epoch 3/3 Step 6250/8544] train_loss=0.2465 val_loss=0.2953 tok/sec=2766.2 | ETA: 18m 05s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06250-bestval.pth (val_loss=0.2953)
+[Epoch 3/3 Step 6300/8544] train_loss=0.1862 val_loss=0.2960 tok/sec=2680.7 | ETA: 17m 41s
+[Epoch 3/3 Step 6350/8544] train_loss=0.3050 val_loss=0.2952 tok/sec=2709.8 | ETA: 17m 17s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06350-bestval.pth (val_loss=0.2952)
+[Epoch 3/3 Step 6400/8544] train_loss=0.1087 val_loss=0.2946 tok/sec=2859.1 | ETA: 16m 54s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06400-bestval.pth (val_loss=0.2946)
+[Epoch 3/3 Step 6450/8544] train_loss=0.2708 val_loss=0.2946 tok/sec=3053.5 | ETA: 16m 30s
+[Epoch 3/3 Step 6500/8544] train_loss=0.2521 val_loss=0.2943 tok/sec=2962.4 | ETA: 16m 06s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06500-bestval.pth (val_loss=0.2943)
+[Epoch 3/3 Step 6550/8544] train_loss=0.1991 val_loss=0.2950 tok/sec=3346.7 | ETA: 15m 43s
+[Epoch 3/3 Step 6600/8544] train_loss=0.3292 val_loss=0.2940 tok/sec=3280.5 | ETA: 15m 19s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06600-bestval.pth (val_loss=0.2940)
+[Epoch 3/3 Step 6650/8544] train_loss=0.2094 val_loss=0.2939 tok/sec=3352.7 | ETA: 14m 55s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06650-bestval.pth (val_loss=0.2939)
+[Epoch 3/3 Step 6700/8544] train_loss=0.3299 val_loss=0.2940 tok/sec=3723.3 | ETA: 14m 31s
+[Epoch 3/3 Step 6750/8544] train_loss=0.3179 val_loss=0.2940 tok/sec=3763.7 | ETA: 14m 07s
+[Epoch 3/3 Step 6800/8544] train_loss=0.4760 val_loss=0.2934 tok/sec=3729.9 | ETA: 13m 43s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06800-bestval.pth (val_loss=0.2934)
+[Epoch 3/3 Step 6850/8544] train_loss=0.5853 val_loss=0.2926 tok/sec=3824.9 | ETA: 13m 20s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step06850-bestval.pth (val_loss=0.2926)
+[Epoch 3/3 Step 6900/8544] train_loss=0.4228 val_loss=0.2931 tok/sec=3879.0 | ETA: 12m 56s
+[Epoch 3/3 Step 6950/8544] train_loss=0.1489 val_loss=0.2934 tok/sec=4115.1 | ETA: 12m 32s
+[Epoch 3/3 Step 7000/8544] train_loss=0.3155 val_loss=0.2931 tok/sec=3792.6 | ETA: 12m 08s
+[Epoch 3/3 Step 7050/8544] train_loss=0.1074 val_loss=0.2929 tok/sec=4401.7 | ETA: 11m 44s
+[Epoch 3/3 Step 7100/8544] train_loss=0.1740 val_loss=0.2934 tok/sec=4352.1 | ETA: 11m 21s
+[Epoch 3/3 Step 7150/8544] train_loss=0.2125 val_loss=0.2938 tok/sec=4637.7 | ETA: 10m 57s
+[Epoch 3/3 Step 7200/8544] train_loss=0.1663 val_loss=0.2936 tok/sec=4884.7 | ETA: 10m 33s
+[Epoch 3/3 Step 7250/8544] train_loss=0.6604 val_loss=0.2925 tok/sec=5027.4 | ETA: 10m 09s
+Saved best-val checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step07250-bestval.pth (val_loss=0.2925)
+[Epoch 3/3 Step 7300/8544] train_loss=0.2251 val_loss=0.2929 tok/sec=5033.5 | ETA: 09m 46s
+[Epoch 3/3 Step 7350/8544] train_loss=0.4188 val_loss=0.2928 tok/sec=4937.1 | ETA: 09m 22s
+[Epoch 3/3 Step 7400/8544] train_loss=0.4288 val_loss=0.2929 tok/sec=4755.8 | ETA: 08m 59s
+[Epoch 3/3 Step 7450/8544] train_loss=0.2686 val_loss=0.2930 tok/sec=5357.6 | ETA: 08m 35s
+[Epoch 3/3 Step 7500/8544] train_loss=0.5428 val_loss=0.2930 tok/sec=5399.0 | ETA: 08m 12s
+[Epoch 3/3 Step 7550/8544] train_loss=0.4783 val_loss=0.2925 tok/sec=5605.1 | ETA: 07m 48s
+[Epoch 3/3 Step 7600/8544] train_loss=0.6371 val_loss=0.2929 tok/sec=5728.0 | ETA: 07m 24s
+[Epoch 3/3 Step 7650/8544] train_loss=0.4054 val_loss=0.2930 tok/sec=5677.2 | ETA: 07m 01s
+[Epoch 3/3 Step 7700/8544] train_loss=0.6216 val_loss=0.2933 tok/sec=5961.7 | ETA: 06m 37s
+[Epoch 3/3 Step 7750/8544] train_loss=0.1300 val_loss=0.2930 tok/sec=5751.7 | ETA: 06m 14s
+[Epoch 3/3 Step 7800/8544] train_loss=0.3624 val_loss=0.2934 tok/sec=5916.0 | ETA: 05m 50s
+[Epoch 3/3 Step 7850/8544] train_loss=0.4780 val_loss=0.2936 tok/sec=6443.0 | ETA: 05m 27s
+[Epoch 3/3 Step 7900/8544] train_loss=0.5447 val_loss=0.2934 tok/sec=6394.7 | ETA: 05m 03s
+[Epoch 3/3 Step 7950/8544] train_loss=0.2379 val_loss=0.2944 tok/sec=6210.0 | ETA: 04m 40s
+[Epoch 3/3 Step 8000/8544] train_loss=0.7200 val_loss=0.2931 tok/sec=6796.3 | ETA: 04m 16s
+[Epoch 3/3 Step 8050/8544] train_loss=0.2393 val_loss=0.2939 tok/sec=7175.0 | ETA: 03m 53s
+[Epoch 3/3 Step 8100/8544] train_loss=0.3758 val_loss=0.2941 tok/sec=7175.2 | ETA: 03m 29s
+[Epoch 3/3 Step 8150/8544] train_loss=0.3766 val_loss=0.2944 tok/sec=6778.5 | ETA: 03m 06s
+[Epoch 3/3 Step 8200/8544] train_loss=0.3813 val_loss=0.2947 tok/sec=7435.5 | ETA: 02m 42s
+[Epoch 3/3 Step 8250/8544] train_loss=0.3902 val_loss=0.2946 tok/sec=7005.8 | ETA: 02m 19s
+[Epoch 3/3 Step 8300/8544] train_loss=0.5175 val_loss=0.2954 tok/sec=7854.1 | ETA: 01m 55s
+[Epoch 3/3 Step 8350/8544] train_loss=0.5510 val_loss=0.2957 tok/sec=7951.3 | ETA: 01m 32s
+[Epoch 3/3 Step 8400/8544] train_loss=0.2653 val_loss=0.2955 tok/sec=7296.3 | ETA: 01m 08s
+[Epoch 3/3 Step 8450/8544] train_loss=0.7683 val_loss=0.2948 tok/sec=7027.2 | ETA: 44s
+[Epoch 3/3 Step 8500/8544] train_loss=0.2550 val_loss=0.2948 tok/sec=7364.6 | ETA: 21s
+Saved checkpoint to remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step08544-epoch3.pth
+Best validation checkpoint: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/checkpoints/qwen3-0.6B-qwen235b-maxlen2048-hf-step07250-bestval.pth (val_loss=0.2925)
+Training completed in 67.52 minutes.
+Max CUDA memory allocated: 20.08 GB

@@ -1,0 +1,13 @@
+Model: reasoning
+Runtime: hf
+Device: cuda
+Eval batch size: 16
+✓ qwen3/tokenizer-reasoning.json already up-to-date
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Writing results to: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/evals/eval_final_epoch3.jsonl
+MATH-500: 16/500 | ETA: 1h 21m 50s  MATH-500: 32/500 | ETA: 1h 17m 33s  MATH-500: 48/500 | ETA: 1h 13m 43s  MATH-500: 64/500 | ETA: 1h 10m 28s  MATH-500: 80/500 | ETA: 1h 07m 23s  MATH-500: 96/500 | ETA: 1h 05m 25s  MATH-500: 112/500 | ETA: 1h 03m 10s MATH-500: 128/500 | ETA: 1h 00m 37s MATH-500: 144/500 | ETA: 57m 49s    MATH-500: 160/500 | ETA: 55m 15s    MATH-500: 176/500 | ETA: 53m 20s    MATH-500: 192/500 | ETA: 50m 58s    MATH-500: 208/500 | ETA: 48m 11s    MATH-500: 224/500 | ETA: 46m 00s    MATH-500: 240/500 | ETA: 43m 11s    MATH-500: 256/500 | ETA: 40m 28s    MATH-500: 272/500 | ETA: 37m 48s    MATH-500: 288/500 | ETA: 35m 11s    MATH-500: 304/500 | ETA: 32m 48s    MATH-500: 320/500 | ETA: 30m 02s    MATH-500: 336/500 | ETA: 27m 21s    MATH-500: 352/500 | ETA: 24m 37s    MATH-500: 368/500 | ETA: 21m 57s    MATH-500: 384/500 | ETA: 19m 17s    MATH-500: 400/500 | ETA: 16m 37s    MATH-500: 416/500 | ETA: 13m 56s    MATH-500: 432/500 | ETA: 11m 15s    MATH-500: 448/500 | ETA: 08m 36s    MATH-500: 464/500 | ETA: 05m 57s    MATH-500: 480/500 | ETA: 03m 18s    MATH-500: 496/500 | ETA: 40s        MATH-500: 500/500 | ETA: 00s        
+Accuracy: 21.4% (107/500)
+Total time: 83.2 min
+Average response length: 4103.91 tokens
+Logs written to: remote_artifacts/qwen_sft_235b_a22b_maxlen2048_hf/evals/eval_final_epoch3.jsonl
