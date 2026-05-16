@@ -16,8 +16,15 @@ Full MATH-500 (n=500), `max_new_tokens=4096`, greedy decoding.
 | Model | Accuracy | Correct/N | Avg gen chars | Median gen chars |
 | --- | --- | --- | --- | --- |
 | Qwen3-0.6B base (no fine-tuning) | 16.0% | 80/500 | 216 | 12 |
-| **Distilled (epoch 3, 12K V4 Pro traces)** | **34.6%** | **173/500** | **5,835** | **3,817** |
+| **DeepSeek-SFT (epoch 3, 12K V4 Pro traces, cross-family)** | **34.6%** | **173/500** | **5,835** | **3,817** |
+| **Qwen-SFT (best-val, 12K Qwen3-235B-A22B traces, same-family, `max_seq_len=2048`)** | **37.8%** | **189/500** | **34,274** | **41,541** |
 | Qwen3-0.6B reasoning (Qwen official) | 60.4% | 302/500 | 5,847 | 4,042 |
+
+The Qwen-SFT row's huge avg/median gen-chars (34K/41K) is post-answer rambling: the
+student emits `</think>\boxed{answer}` properly 79.4% of the time but then keeps
+generating "Actually, let me double-check..." prose until `max_new_tokens=4096` is hit.
+The correct answers are usually at the front of the output; the rambling is cosmetic
+and doesn't affect accuracy.
 
 Raw eval JSONLs: [`remote_artifacts/qwen_distill/evals/`](qwen_distill/evals).
 Aggregated CSVs: [`comparison.csv`](qwen_distill/comparison.csv), [`comparison_by_level.csv`](qwen_distill/comparison_by_level.csv), [`overlap_matrix.csv`](qwen_distill/overlap_matrix.csv).
