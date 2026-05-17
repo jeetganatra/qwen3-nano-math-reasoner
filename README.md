@@ -21,9 +21,15 @@ Full MATH-500 (n=500), `max_new_tokens=4096`, greedy decoding.
 | **SFT distillation (this repo)** | 12K DeepSeek V4 Pro traces (cross-family), 3 epochs | **34.6%** |
 | **Qwen-SFT distillation (this repo, best-val)** | 12K Qwen3-235B-A22B traces (same-family), `max_seq_len=2048` | **37.8%** |
 | **SFT distillation → GRPO (this repo, step 50)** | GRPO continuation from the DeepSeek-distilled checkpoint | **50.0%*** |
-| Qwen3-0.6B reasoning | Qwen's officially-released reasoning variant (ceiling) | 60.4% |
+| Qwen3-0.6B reasoning | Qwen's officially-released reasoning variant | 60.4% |
 
 \* GRPO accuracies are from a 50-problem MATH-500 subset evaluated mid-training; the full 500-problem evals are pending. The distillation, base, and Qwen reasoning numbers are from the full 500.
+
+![MATH-500 headline accuracy](results/comparisons/eval_comparison_headline.png)
+
+![MATH-500 accuracy by problem difficulty](results/comparisons/eval_comparison_by_level.png)
+
+Same-family Qwen-SFT pulls ahead of cross-family DeepSeek-SFT on the harder levels (3, 4, 5) but loses on level 2 — consistent with its longer-trace teacher providing more useful supervision for multi-step problems.
 
 Full breakdown including per-difficulty accuracy and solution overlap: [`results/eval_summary.md`](results/eval_summary.md)
 
