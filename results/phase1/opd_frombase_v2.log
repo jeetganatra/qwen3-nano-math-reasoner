@@ -1,0 +1,158 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Using NVIDIA CUDA GPU
+Student checkpoint: base
+Teacher: Qwen/Qwen3-4B
+kl_type=jsd sampling=batched num_rollouts=4
+✓ qwen3/tokenizer-reasoning.json already up-to-date
+✓ qwen3/qwen3-0.6B-base.pth already up-to-date
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 5887.05it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Teacher dtype=torch.bfloat16, prompt_format=render.
+✓ qwen3/qwen3-0.6B-base.pth already up-to-date
+Vocab alignment OK: student=151936 teacher=151936 (Qwen3 shared vocab).
+[Step 1/240] kl=0.0515 D=0.052 k3=0.000 H=0.31 n_roll=4 ans_len=768 capped=1.00 tok/s=57 | ETA: 3h 34m 54s
+[Step 2/240] kl=0.0628 D=0.063 k3=0.000 H=0.40 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 2h 33m 01s
+[Step 3/240] kl=0.0526 D=0.053 k3=0.000 H=0.57 n_roll=4 ans_len=768 capped=1.00 tok/s=120 | ETA: 2h 15m 22s
+[Step 4/240] kl=0.0560 D=0.057 k3=0.000 H=0.52 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 2h 03m 59s
+[Step 5/240] kl=0.0716 D=0.072 k3=0.000 H=0.62 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 56m 34s
+[Step 6/240] kl=0.0477 D=0.048 k3=0.000 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 51m 53s
+[Step 7/240] kl=0.0443 D=0.045 k3=0.000 H=0.26 n_roll=4 ans_len=768 capped=1.00 tok/s=133 | ETA: 1h 48m 20s
+[Step 8/240] kl=0.0727 D=0.073 k3=0.000 H=0.57 n_roll=4 ans_len=768 capped=1.00 tok/s=133 | ETA: 1h 45m 32s
+[Step 9/240] kl=0.0614 D=0.062 k3=0.000 H=0.59 n_roll=4 ans_len=768 capped=1.00 tok/s=97 | ETA: 1h 46m 59s
+[Step 10/240] kl=0.0623 D=0.063 k3=0.000 H=0.55 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 44m 47s
+[Step 11/240] kl=0.0620 D=0.063 k3=0.000 H=0.67 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 42m 56s
+[Step 12/240] kl=0.0504 D=0.051 k3=0.000 H=0.46 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 41m 18s
+[Step 13/240] kl=0.0801 D=0.081 k3=0.000 H=0.67 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 39m 45s
+[Step 14/240] kl=0.0535 D=0.054 k3=0.000 H=0.48 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 38m 20s
+[Step 15/240] kl=0.0774 D=0.078 k3=0.000 H=0.68 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 37m 04s
+[Step 16/240] kl=0.0617 D=0.062 k3=0.000 H=0.62 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 35m 54s
+[Step 17/240] kl=0.0553 D=0.056 k3=0.000 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 34m 49s
+[Step 18/240] kl=0.0608 D=0.061 k3=0.000 H=0.50 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 33m 46s
+[Step 19/240] kl=0.0681 D=0.069 k3=0.000 H=0.64 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 32m 47s
+[Step 20/240] kl=0.0721 D=0.073 k3=0.000 H=0.69 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 31m 55s
+[Step 21/240] kl=0.0644 D=0.065 k3=0.000 H=0.55 n_roll=4 ans_len=768 capped=1.00 tok/s=139 | ETA: 1h 30m 59s
+[Step 22/240] kl=0.0488 D=0.049 k3=0.000 H=0.38 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 30m 11s
+[Step 23/240] kl=0.0457 D=0.046 k3=0.000 H=0.29 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 29m 22s
+[Step 24/240] kl=0.0566 D=0.057 k3=0.000 H=0.35 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 28m 39s
+[Step 25/240] kl=0.0923 D=0.093 k3=0.000 H=0.40 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 27m 58s
+[Step 26/240] kl=0.0428 D=0.043 k3=0.000 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 27m 14s
+[Step 27/240] kl=0.0726 D=0.073 k3=0.001 H=0.64 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 26m 33s
+[Step 28/240] kl=0.0542 D=0.055 k3=0.000 H=0.44 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 25m 53s
+[Step 29/240] kl=0.0357 D=0.036 k3=0.000 H=0.25 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 25m 19s
+[Step 30/240] kl=0.0676 D=0.068 k3=0.001 H=0.55 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 24m 44s
+[Step 31/240] kl=0.0477 D=0.048 k3=0.000 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 24m 11s
+[Step 32/240] kl=0.0635 D=0.064 k3=0.001 H=0.46 n_roll=4 ans_len=768 capped=1.00 tok/s=133 | ETA: 1h 23m 39s
+[Step 33/240] kl=0.0620 D=0.063 k3=0.001 H=0.61 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 23m 05s
+[Step 34/240] kl=0.0452 D=0.046 k3=0.000 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 22m 33s
+[Step 35/240] kl=0.0661 D=0.067 k3=0.001 H=0.55 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 22m 03s
+[Step 36/240] kl=0.0605 D=0.061 k3=0.000 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 21m 30s
+[Step 37/240] kl=0.0687 D=0.069 k3=0.001 H=0.48 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 20m 59s
+[Step 38/240] kl=0.0579 D=0.058 k3=0.001 H=0.49 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 20m 26s
+[Step 39/240] kl=0.0713 D=0.072 k3=0.001 H=0.62 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 19m 55s
+Saved checkpoint to results/phase1/opd_frombase_v2/checkpoints/qwen3-0.6B-opd-frombase-v2-step00040.pth
+MATH-500: 16/50 | ETA: 05m 16s    MATH-500: 32/50 | ETA: 02m 02s    MATH-500: 48/50 | ETA: 12s        MATH-500: 50/50 | ETA: 00s        
+Accuracy: 26.0% (13/50)
+Total time: 7.2 min
+Average response length: 2056.00 tokens
+Logs written to: results/phase1/opd_frombase_v2/evals/qwen_opd-step00040-math500.jsonl
+MATH-500 eval @ step 40: acc=0.260 (13/50)
+[Step 40/240] kl=0.0227 D=0.023 k3=0.000 H=0.20 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 55m 21s
+[Step 41/240] kl=0.0612 D=0.062 k3=0.001 H=0.58 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 53m 47s
+[Step 42/240] kl=0.0752 D=0.076 k3=0.001 H=0.70 n_roll=4 ans_len=768 capped=1.00 tok/s=139 | ETA: 1h 52m 16s
+[Step 43/240] kl=0.0587 D=0.059 k3=0.001 H=0.52 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 50m 48s
+[Step 44/240] kl=0.0630 D=0.063 k3=0.001 H=0.52 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 49m 24s
+[Step 45/240] kl=0.0708 D=0.071 k3=0.001 H=0.71 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 48m 03s
+[Step 46/240] kl=0.0563 D=0.057 k3=0.001 H=0.46 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 46m 45s
+[Step 47/240] kl=0.0554 D=0.056 k3=0.001 H=0.44 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 45m 29s
+[Step 48/240] kl=0.0462 D=0.046 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 44m 15s
+[Step 49/240] kl=0.0537 D=0.054 k3=0.001 H=0.25 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 43m 05s
+[Step 50/240] kl=0.0728 D=0.073 k3=0.001 H=0.55 n_roll=4 ans_len=768 capped=1.00 tok/s=133 | ETA: 1h 41m 58s
+[Step 51/240] kl=0.0700 D=0.070 k3=0.001 H=0.48 n_roll=4 ans_len=768 capped=0.97 tok/s=135 | ETA: 1h 40m 50s
+[Step 52/240] kl=0.0389 D=0.039 k3=0.001 H=0.40 n_roll=4 ans_len=768 capped=0.97 tok/s=116 | ETA: 1h 39m 59s
+[Step 53/240] kl=0.0542 D=0.055 k3=0.001 H=0.43 n_roll=4 ans_len=768 capped=0.97 tok/s=136 | ETA: 1h 38m 54s
+[Step 54/240] kl=0.0522 D=0.053 k3=0.001 H=0.42 n_roll=4 ans_len=768 capped=0.97 tok/s=137 | ETA: 1h 37m 50s
+[Step 55/240] kl=0.0555 D=0.056 k3=0.001 H=0.37 n_roll=4 ans_len=768 capped=0.97 tok/s=137 | ETA: 1h 36m 48s
+[Step 56/240] kl=0.0753 D=0.076 k3=0.001 H=0.63 n_roll=4 ans_len=768 capped=0.97 tok/s=137 | ETA: 1h 35m 47s
+[Step 57/240] kl=0.0595 D=0.060 k3=0.001 H=0.43 n_roll=4 ans_len=768 capped=0.97 tok/s=135 | ETA: 1h 34m 49s
+[Step 58/240] kl=0.0564 D=0.057 k3=0.001 H=0.37 n_roll=4 ans_len=768 capped=0.97 tok/s=139 | ETA: 1h 33m 50s
+[Step 59/240] kl=0.0746 D=0.075 k3=0.002 H=0.63 n_roll=4 ans_len=768 capped=0.97 tok/s=139 | ETA: 1h 32m 52s
+[Step 60/240] kl=0.0564 D=0.057 k3=0.001 H=0.32 n_roll=4 ans_len=768 capped=0.97 tok/s=138 | ETA: 1h 31m 56s
+[Step 61/240] kl=0.0524 D=0.053 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 31m 01s
+[Step 62/240] kl=0.0575 D=0.058 k3=0.001 H=0.39 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 30m 07s
+[Step 63/240] kl=0.0297 D=0.030 k3=0.001 H=0.23 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 29m 15s
+[Step 64/240] kl=0.0767 D=0.077 k3=0.001 H=0.61 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 28m 24s
+[Step 65/240] kl=0.0608 D=0.061 k3=0.002 H=0.50 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 27m 34s
+[Step 66/240] kl=0.0346 D=0.035 k3=0.001 H=0.26 n_roll=4 ans_len=768 capped=1.00 tok/s=140 | ETA: 1h 26m 42s
+[Step 67/240] kl=0.0317 D=0.032 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=147 | ETA: 1h 25m 49s
+[Step 68/240] kl=0.0382 D=0.038 k3=0.001 H=0.25 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 25m 03s
+[Step 69/240] kl=0.0576 D=0.058 k3=0.002 H=0.51 n_roll=4 ans_len=768 capped=1.00 tok/s=129 | ETA: 1h 24m 19s
+[Step 70/240] kl=0.0485 D=0.049 k3=0.001 H=0.39 n_roll=4 ans_len=768 capped=1.00 tok/s=131 | ETA: 1h 23m 35s
+[Step 71/240] kl=0.0421 D=0.042 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 22m 50s
+[Step 72/240] kl=0.0696 D=0.070 k3=0.001 H=0.57 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 22m 06s
+[Step 73/240] kl=0.0447 D=0.045 k3=0.001 H=0.40 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 21m 23s
+[Step 74/240] kl=0.0552 D=0.055 k3=0.002 H=0.39 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 20m 41s
+[Step 75/240] kl=0.0365 D=0.037 k3=0.001 H=0.25 n_roll=4 ans_len=768 capped=1.00 tok/s=81 | ETA: 1h 20m 31s
+[Step 76/240] kl=0.0608 D=0.061 k3=0.002 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 19m 48s
+[Step 77/240] kl=0.0436 D=0.044 k3=0.001 H=0.31 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 19m 06s
+[Step 78/240] kl=0.0746 D=0.075 k3=0.002 H=0.68 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 18m 25s
+[Step 79/240] kl=0.0595 D=0.060 k3=0.001 H=0.52 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 17m 44s
+Saved checkpoint to results/phase1/opd_frombase_v2/checkpoints/qwen3-0.6B-opd-frombase-v2-step00080.pth
+MATH-500: 16/50 | ETA: 02m 20s    MATH-500: 32/50 | ETA: 01m 14s    MATH-500: 48/50 | ETA: 08s        MATH-500: 50/50 | ETA: 00s        
+Accuracy: 30.0% (15/50)
+Total time: 4.4 min
+Average response length: 2055.32 tokens
+Logs written to: results/phase1/opd_frombase_v2/evals/qwen_opd-step00080-math500.jsonl
+MATH-500 eval @ step 80: acc=0.300 (15/50)
+[Step 80/240] kl=0.0491 D=0.049 k3=0.003 H=0.30 n_roll=4 ans_len=768 capped=1.00 tok/s=131 | ETA: 1h 25m 49s
+[Step 81/240] kl=0.0422 D=0.042 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 24m 59s
+[Step 82/240] kl=0.0497 D=0.050 k3=0.002 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 24m 09s
+[Step 83/240] kl=0.0562 D=0.057 k3=0.001 H=0.48 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 23m 21s
+[Step 84/240] kl=0.0536 D=0.054 k3=0.003 H=0.36 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 22m 33s
+[Step 85/240] kl=0.0374 D=0.038 k3=0.001 H=0.28 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 21m 45s
+[Step 86/240] kl=0.0567 D=0.057 k3=0.002 H=0.38 n_roll=4 ans_len=768 capped=1.00 tok/s=131 | ETA: 1h 20m 58s
+[Step 87/240] kl=0.0637 D=0.064 k3=0.003 H=0.51 n_roll=4 ans_len=768 capped=1.00 tok/s=131 | ETA: 1h 20m 13s
+[Step 88/240] kl=0.0606 D=0.061 k3=0.003 H=0.54 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 19m 27s
+[Step 89/240] kl=0.0664 D=0.067 k3=0.002 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=130 | ETA: 1h 18m 43s
+[Step 90/240] kl=0.0534 D=0.054 k3=0.001 H=0.31 n_roll=4 ans_len=768 capped=1.00 tok/s=130 | ETA: 1h 17m 59s
+[Step 91/240] kl=0.0526 D=0.053 k3=0.001 H=0.36 n_roll=4 ans_len=768 capped=0.97 tok/s=133 | ETA: 1h 17m 14s
+[Step 92/240] kl=0.0604 D=0.061 k3=0.002 H=0.45 n_roll=4 ans_len=768 capped=0.97 tok/s=133 | ETA: 1h 16m 30s
+[Step 93/240] kl=0.0444 D=0.045 k3=0.002 H=0.33 n_roll=4 ans_len=768 capped=0.97 tok/s=133 | ETA: 1h 15m 47s
+[Step 94/240] kl=0.0741 D=0.075 k3=0.004 H=0.56 n_roll=4 ans_len=768 capped=0.97 tok/s=137 | ETA: 1h 15m 02s
+[Step 95/240] kl=0.0671 D=0.068 k3=0.002 H=0.59 n_roll=4 ans_len=768 capped=0.97 tok/s=138 | ETA: 1h 14m 19s
+[Step 96/240] kl=0.0541 D=0.054 k3=0.002 H=0.33 n_roll=4 ans_len=768 capped=0.97 tok/s=139 | ETA: 1h 13m 35s
+[Step 97/240] kl=0.0556 D=0.056 k3=0.002 H=0.40 n_roll=4 ans_len=768 capped=0.97 tok/s=139 | ETA: 1h 12m 52s
+[Step 98/240] kl=0.0576 D=0.058 k3=0.002 H=0.41 n_roll=4 ans_len=768 capped=0.97 tok/s=140 | ETA: 1h 12m 09s
+[Step 99/240] kl=0.0694 D=0.070 k3=0.003 H=0.41 n_roll=4 ans_len=768 capped=0.97 tok/s=137 | ETA: 1h 11m 27s
+[Step 100/240] kl=0.0566 D=0.057 k3=0.003 H=0.41 n_roll=4 ans_len=768 capped=0.97 tok/s=138 | ETA: 1h 10m 45s
+[Step 101/240] kl=0.0531 D=0.053 k3=0.002 H=0.32 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 10m 03s
+[Step 102/240] kl=0.0511 D=0.051 k3=0.003 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 09m 22s
+[Step 103/240] kl=0.0632 D=0.064 k3=0.002 H=0.45 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 08m 42s
+[Step 104/240] kl=0.0738 D=0.074 k3=0.003 H=0.64 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 1h 08m 01s
+[Step 105/240] kl=0.0702 D=0.070 k3=0.003 H=0.41 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 07m 22s
+[Step 106/240] kl=0.0635 D=0.064 k3=0.003 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 1h 06m 43s
+[Step 107/240] kl=0.0532 D=0.053 k3=0.002 H=0.34 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 06m 04s
+[Step 108/240] kl=0.0601 D=0.060 k3=0.003 H=0.45 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 05m 26s
+[Step 109/240] kl=0.0527 D=0.053 k3=0.002 H=0.36 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 04m 48s
+[Step 110/240] kl=0.0564 D=0.057 k3=0.002 H=0.37 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 04m 10s
+[Step 111/240] kl=0.0516 D=0.052 k3=0.003 H=0.36 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 03m 32s
+[Step 112/240] kl=0.0531 D=0.053 k3=0.002 H=0.29 n_roll=4 ans_len=768 capped=1.00 tok/s=136 | ETA: 1h 02m 55s
+[Step 113/240] kl=0.0468 D=0.047 k3=0.002 H=0.32 n_roll=4 ans_len=768 capped=1.00 tok/s=140 | ETA: 1h 02m 17s
+[Step 114/240] kl=0.0508 D=0.051 k3=0.003 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=139 | ETA: 1h 01m 39s
+[Step 115/240] kl=0.0640 D=0.064 k3=0.002 H=0.60 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 01m 02s
+[Step 116/240] kl=0.0505 D=0.051 k3=0.003 H=0.32 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 00m 25s
+[Step 117/240] kl=0.0567 D=0.057 k3=0.003 H=0.29 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 59m 49s
+[Step 118/240] kl=0.0482 D=0.048 k3=0.003 H=0.42 n_roll=4 ans_len=768 capped=1.00 tok/s=137 | ETA: 59m 13s
+[Step 119/240] kl=0.0529 D=0.053 k3=0.001 H=0.29 n_roll=4 ans_len=768 capped=1.00 tok/s=134 | ETA: 58m 37s
+Saved checkpoint to results/phase1/opd_frombase_v2/checkpoints/qwen3-0.6B-opd-frombase-v2-step00120.pth
+MATH-500: 16/50 | ETA: 02m 15s    MATH-500: 32/50 | ETA: 01m 11s    MATH-500: 48/50 | ETA: 08s        MATH-500: 50/50 | ETA: 00s        
+Accuracy: 20.0% (10/50)
+Total time: 4.2 min
+Average response length: 2055.68 tokens
+Logs written to: results/phase1/opd_frombase_v2/evals/qwen_opd-step00120-math500.jsonl
+MATH-500 eval @ step 120: acc=0.200 (10/50)
+[Step 120/240] kl=0.0522 D=0.052 k3=0.003 H=0.25 n_roll=4 ans_len=768 capped=1.00 tok/s=132 | ETA: 1h 02m 16s
+[Step 121/240] kl=0.0529 D=0.053 k3=0.001 H=0.22 n_roll=4 ans_len=768 capped=1.00 tok/s=138 | ETA: 1h 01m 37s
+[Step 122/240] kl=0.0572 D=0.057 k3=0.004 H=0.31 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 1h 00m 58s
+[Step 123/240] kl=0.0543 D=0.054 k3=0.001 H=0.26 n_roll=4 ans_len=768 capped=1.00 tok/s=133 | ETA: 1h 00m 19s
+[Step 124/240] kl=0.0553 D=0.056 k3=0.003 H=0.45 n_roll=4 ans_len=768 capped=1.00 tok/s=135 | ETA: 59m 40s

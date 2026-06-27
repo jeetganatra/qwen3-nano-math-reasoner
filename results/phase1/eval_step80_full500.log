@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Using NVIDIA CUDA GPU
+Model: reasoning
+Runtime: hf
+Device: cuda
+Eval batch size: 16
+✓ qwen3/tokenizer-reasoning.json already up-to-date
+Writing results to: results/phase1/opd_frombase_v2_step80_full500_2048.jsonl
+MATH-500: 16/500 | ETA: 1h 09m 32s  MATH-500: 32/500 | ETA: 48m 57s     MATH-500: 48/500 | ETA: 41m 08s     MATH-500: 64/500 | ETA: 36m 20s     MATH-500: 80/500 | ETA: 33m 16s     MATH-500: 96/500 | ETA: 31m 06s     MATH-500: 112/500 | ETA: 28m 58s    MATH-500: 128/500 | ETA: 27m 06s    MATH-500: 144/500 | ETA: 25m 26s    MATH-500: 160/500 | ETA: 23m 55s    MATH-500: 176/500 | ETA: 22m 58s    MATH-500: 192/500 | ETA: 21m 35s    MATH-500: 208/500 | ETA: 20m 15s    MATH-500: 224/500 | ETA: 19m 02s    MATH-500: 240/500 | ETA: 17m 48s    MATH-500: 256/500 | ETA: 16m 36s    MATH-500: 272/500 | ETA: 15m 25s    MATH-500: 288/500 | ETA: 14m 15s    MATH-500: 304/500 | ETA: 13m 11s    MATH-500: 320/500 | ETA: 12m 03s    MATH-500: 336/500 | ETA: 10m 56s    MATH-500: 352/500 | ETA: 09m 50s    MATH-500: 368/500 | ETA: 08m 44s    MATH-500: 384/500 | ETA: 07m 39s    MATH-500: 400/500 | ETA: 06m 34s    MATH-500: 416/500 | ETA: 05m 31s    MATH-500: 432/500 | ETA: 04m 28s    MATH-500: 448/500 | ETA: 03m 25s    MATH-500: 464/500 | ETA: 02m 22s    MATH-500: 480/500 | ETA: 01m 19s    MATH-500: 496/500 | ETA: 16s        MATH-500: 500/500 | ETA: 00s        
+Accuracy: 28.8% (144/500)
+Total time: 35.2 min
+Average response length: 2050.78 tokens
+Logs written to: results/phase1/opd_frombase_v2_step80_full500_2048.jsonl
